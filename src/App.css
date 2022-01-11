@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    transition: 0.5s ease all;
+}
+
+h1 {
+    background: linear-gradient(var(--main-color-1) 0%, var(--darken-main-color-1) 100%);
+    background-clip: text;
+    font-size: 68px;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-and-searchbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
