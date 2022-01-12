@@ -11,27 +11,16 @@ function GenerateCard({ card }) {
     }
     return (
         <div className="GenerateCard" >
-            
-            <div className="flex-cards-visual" style={{ backgroundImage: `url(${card.image})` }}>
-                <div className="card-visual-row">
-                {card.language.includes("Anglais") ?
-                        <span>
-                            <img src={FlagENG} alt={card.language} />
-                        </span>
-                        :
-                        <span>
-                            <img src={FlagFR} alt={card.language} />
-                        </span>
-                    }
 
-                    <span><i class="material-icons">remove_red_eye</i>{getRandomInt(90)+50}</span>
-                    <span><i class="material-icons">comment</i>{getRandomInt(50)}</span>
-                </div>
+            <div className="flex-cards-visual" style={{ backgroundImage: `url(${card.image})` }}>
+                {/* <span className="devtype-stylized">
+                    {card.devtype.map((devMap) => <li>{devMap}</li>)}
+                </span> */}
             </div>
 
             <div className="flex-cards-description">
                 <h3 className="card-title">{card.title}</h3>
-                <div className="format-stylized">
+                <div>
                     {(() => {
                         if (card.format.includes("Image")) {
                             return <span><i class="material-icons">image</i>{card.format}</span>
@@ -48,14 +37,25 @@ function GenerateCard({ card }) {
                     }
                     )()}
                 </div>
-                <span className="devtype-stylized">
-                    {card.devtype.map((devMap) => <li>{devMap}</li>)}
-                </span>
-                 
+
 
                 <p>{card.description}</p>
-                <p>Posté par : {card.submitter}</p>
-                <p>{card.date}</p>
+                <p>Posté par : {card.submitter} le {card.date}</p>
+            </div>
+
+            <div className="card-visual-row">
+                {card.language.includes("Anglais") ?
+                    <span>
+                        <img src={FlagENG} alt={card.language} />
+                    </span>
+                    :
+                    <span>
+                        <img src={FlagFR} alt={card.language} />
+                    </span>
+                }
+
+                <span><i class="material-icons">remove_red_eye</i>{getRandomInt(90) + 50}</span>
+                <span><i class="material-icons">comment</i>{getRandomInt(50)}</span>
                 <a className="asset-link" href={card.link} target="_blank" rel="noreferrer noopener">Link</a>
             </div>
         </div>

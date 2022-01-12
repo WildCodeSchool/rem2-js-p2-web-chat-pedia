@@ -4,11 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      <div className="title-and-searchbar">
+    <div className="viewport-modifier">
       <h1>Wikipawdia</h1>
       <GetCards />
-    </div>
     </div>
   )
 }
