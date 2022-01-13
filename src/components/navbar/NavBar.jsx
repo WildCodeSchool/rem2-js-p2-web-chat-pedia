@@ -13,7 +13,7 @@ const Navbar = () => {
             <div className='Navbar'>
                 
                 <NavLink to="/"><img src={logo} alt="cat logo" className='logo'/></ NavLink>
-                <NavLink to="/"className="title-container"><p className="title">Welcome web-chat-pedia!</p></ NavLink>
+                <NavLink to="/"className="title-container"><p className="title">Wikipawdia</p></ NavLink>
 
                 
                 {/* <input type="text" className={isVisible ? "search-bar-on" : "search-bar"} /> */}
