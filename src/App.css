@@ -1,5 +1,59 @@
+
 * {
     margin: 0;
     padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+    --background-gradient : linear-gradient(var(--main-color-1) 0%,  var(--darken-main-color-1) 100%);;
+    --border-radius: 1em;
+    --border-top: 3px solid var(--main-color-1);
+    --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.315);
+    --main-color-1: rgb(241, 99, 98);
+    --darken-main-color-1: rgb(199, 82, 82);
+    --main-color-2: rgb(228, 228, 228);
+    --main-color-3: rgb(55, 55, 55);
+    --padding-margins: 20px;
+    --width: 35vw;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Lato', sans-serif;
+    transition: 0.5s ease all;
+    background-image: url(/src/assets/catbg2.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    background: linear-gradient(var(--main-color-1) 0%, var(--darken-main-color-1) 100%);
+    background-clip: text;
+    font-size: 68px;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1080px) {
+    .GenerateCard {
+        width: calc(var(--width)*2);
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .viewport-modifier {
+        width: calc(var(--width)*2);
+    }
+
+    h1 {
+        font-size: 42px;
+        text-align: center;
+    }
 }
 
