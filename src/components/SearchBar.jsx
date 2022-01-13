@@ -4,7 +4,7 @@ import "./SearchBar.css"
 function SearchBar() {
 
     const [cards, setCards] = useState([]);
-    const [searchTerm, setSearchTerm] = useState();
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(()=> {
       fetch("https://a.nacapi.com/AssetsDevList")
