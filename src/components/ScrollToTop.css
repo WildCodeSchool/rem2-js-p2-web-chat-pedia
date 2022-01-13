@@ -1,21 +1,13 @@
-.goTop {
-    display: block;
-}
-
-.goTop-img {
+.button  {
+    z-index:2;
     position: fixed;
-    background: rgba(252,248,241,0.8);
-    box-shadow: 2px 2px 5px yellow;
-    width:30px;
-    height:30px;
-    border-radius:25px;
-    bottom: 5%;
-    left: 90%;
-    cursor: pointer;
-    text-align: center;
-    line-height: 30px;
+    bottom:2vh;
+    background-color: white;
+    right:5%;
 }
 
-.goTop-img :hover {
-    transform: scale(1.1);
+.button:hover  {
+    transition:0.3s;
+    
+    
 }

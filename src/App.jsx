@@ -3,33 +3,10 @@ import './App.css';
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [showGoTop, setShowGoTop] = useState("goTopHidden");
-
-  const handleVisibleButton = () => {
-    const position = window.pageYOffset;
-    setSrollPosition(position);
-
-    if (scrollPosition > 50) {
-      return setshowGoTop("goTop");
-    } else if (scrollPosition < 50) {
-      return setshowGoTop("goTopHidden");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleVisibleButton);
-  });
-
-  const handleScrollUp = () => {
-    refScrollUp.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-
+  
   return (
     <div className="App">
-      <div ref={refScrollUp}> </div>
-      <ScrollToTop showGoTop={showGoTop} scrollUp={handleScrollUp} />
+      <ScrollToTop showBelow={250}/>
       <h1>Welcome web-chat-pedia!</h1>
       <div className="container">
         <div className="box box--1"></div>
