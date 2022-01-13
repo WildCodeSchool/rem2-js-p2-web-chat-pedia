@@ -16,7 +16,7 @@ const Navbar = () => {
                 <NavLink to="/"className="title-container"><p className="title">Welcome web-chat-pedia!</p></ NavLink>
 
                 
-                <input type="text" className={isVisible ? "search-bar-on" : "search-bar"} />
+                {/* <input type="text" className={isVisible ? "search-bar-on" : "search-bar"} /> */}
 
 
                 <div className='navigation'>
