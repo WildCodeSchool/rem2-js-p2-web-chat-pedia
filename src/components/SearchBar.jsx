@@ -15,7 +15,6 @@ function SearchBar() {
     }, [] );
 
     const handleSearchTerm = (e) => {
-        console.log(e.target.value);
         let value = e.target.value;
         value.length >= 2 && setSearchTerm(value);
         setSearchTerm(e.target.value);
@@ -26,8 +25,6 @@ function SearchBar() {
                 setSearchShow(true);
             }
     };
-
-    console.log(searchTerm)
 
     return (
         <div className="cover">
