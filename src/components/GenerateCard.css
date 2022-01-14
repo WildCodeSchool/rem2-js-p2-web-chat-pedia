@@ -30,16 +30,19 @@ body {
     font-size: 13px;
     font-weight: 700;
     flex-wrap: wrap;
+    height: 340px;
     margin: 20px 0px;
     overflow: hidden;
     width: var(--width);
 }
 
 .flex-cards-visual {
-    display: flex;
     background-position: bottom;
     background-size: cover;
-    width: 42%;
+    display: flex;
+    overflow: hidden;
+    width: 30%;
+    height: 75%;
 }
 
 .card-visual-row {
@@ -72,33 +75,32 @@ span {
 .flex-cards-description {
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
-    width: 50%;
+    margin-left: 20px;
+    width: 60%;
 }
 
 .card-title {
-    margin: calc(var(--padding-margins)/2) 0px;
+    font-size: large;
+    margin: var(--padding-margins) 0px;
+    text-overflow: ellipsis;
     text-transform: uppercase;
 }
 
 .devtype-stylized {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .devtype-stylized li {
-    background: var(--background-gradient);
-    border-radius: var(--border-radius);
+    background: var(--main-color-3);
     color: var(--main-color-2);
     list-style: none;
-    margin: 0px calc(var(--padding-margins)/2) 0px 0px;
+    padding: calc(var(--padding-margins)/3);
+    text-align: center;
     text-transform: uppercase;
-    width: 100px;
-}
-
-.format-stylized {
-    display: flex;
-    justify-content: center;
+    width: 100%;
 }
 
 p {
@@ -106,16 +108,31 @@ p {
 }
 
 .asset-link {
-    align-self: flex-end;
     background: var(--background-gradient);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     color: var(--main-color-2);
-    margin: var(--padding-margins) var(--padding-margins);
     padding: 10px var(--padding-margins);
-    text-transform: uppercase;
+    text-align: center;
     text-decoration: none;
-    width: fit-content;
+    text-transform: uppercase;
 }
 
-@media screen and (max-width: 810px) {}
+@media screen and (max-width: 760px) {
+    .GenerateCard {
+        height: 420px;
+    }
+
+    .flex-cards-visual {
+        height: 85%;
+    }
+
+    .card-title {
+        white-space: normal;
+    }
+
+    .card-visual-row {
+        height: 60px;
+    }
+
+}

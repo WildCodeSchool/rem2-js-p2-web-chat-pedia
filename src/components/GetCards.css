@@ -1,6 +1,13 @@
-.GetCard {
+.GetCards {
     width: calc(var(--width)*2.1);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    transition: 0.5s ease all;
+}
+
+@media screen and (max-width: 1080px) {
+    .GetCards {
+        flex-direction: column;
+    }
 }

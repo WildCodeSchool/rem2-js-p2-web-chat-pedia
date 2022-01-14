@@ -13,7 +13,7 @@ function GetCards() {
   }, [] );
 
   return (
-    <div className="GetCard">
+    <div className="GetCards">
       {
       cards &&
       cards.map((card) => (
