@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import GetCards from './components/GetCards';
 import React from "react";
 import './App.css';
+import Footer from './components/Footer';
 import SearchBar from "./components/SearchBar";
 // import AssetsFilter from './components/AssetsFilter';
 import Scroll from "./components/Scroll";
@@ -26,9 +27,11 @@ function App() {
         <h1>Wikipawdia</h1>
         {/* <AssetsFilter/> */}
         <GetCards />
+        <Footer />
       </div>
     </div>
   )
 }
+     
 
 export default App;
