@@ -6,7 +6,7 @@ import Login from './pages/Login';
 import GetCards from './components/GetCards';
 import React from "react";
 import './App.css';
-import AssetsFilter from './components/AssetsFilter';
+// import AssetsFilter from './components/AssetsFilter';
 import Scroll from "./components/Scroll";
 
 function App() {
@@ -19,11 +19,10 @@ function App() {
           <Route path="depot" element={< Deposit />} />
           <Route path="login" element={< Login />} />
         </Routes>
-      </header>
       <Scroll/>
       <div className="viewport-modifier">
         <h1>Wikipawdia</h1>
-        <AssetsFilter/>
+        {/* <AssetsFilter/> */}
         <GetCards />
       </div>
     </div>
