@@ -1,15 +1,10 @@
 .Footer {
-
   background-color: #F16362;
   text-align: center;
   padding: 10px 0px 30px 0px;
   color: rgb(228, 228, 228);
   width: 100vw;
 }
-
-
-
-
 
 a {
   text-decoration: none;
@@ -20,7 +15,6 @@ a {
 .contact{
   text-align: center;
 }
-
 
 .container-personel {
   display: flex;
@@ -34,19 +28,16 @@ a {
   align-items: center;
   flex-direction: column;
   margin: 10px 30px;
-
 }
 
 .icon-personel {
   display: flex;
   justify-content: space-evenly;
-
 }
 
 .icon-personel a {
   margin: 0px 10px 0px 0px;
 }
-
 
 .logo img {
   height: auto;
@@ -62,18 +53,15 @@ a {
   top: 0px;
 }
 
-
 @media screen and (max-width:600px) {
   .container-personel {
     flex-wrap: wrap;
-
   }
 
   .logo {
     width: 40vw;
     height: 15vh;
   }
-
 
   .logo img {
     position: absolute;
@@ -82,9 +70,7 @@ a {
   }
 }
 
-
 @media screen and (min-width:501px) and (max-width:600px) {
-
   .container-personel {
     margin: 45px;
   }
