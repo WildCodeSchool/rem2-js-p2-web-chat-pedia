@@ -1,9 +1,10 @@
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome web-chat-pedia!</h1>
+     <Footer/>
     </div>
   );
 }
