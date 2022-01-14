@@ -35,10 +35,11 @@ function SearchBar() {
                     </div>
                     <div className="SearchBar-Button" id="s-cover">
                         <button type="submit" onClick={(e) => setSearchTerm()}>
-                            <div id="s-circle">
-                            </div>
+                            {/* <div id="s-circle">
+                            </div> 
                             <span>
                             </span>
+                            */}
                         </button>
                     </div>
                 </div>

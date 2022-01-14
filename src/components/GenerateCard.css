@@ -11,6 +11,7 @@
     --padding-margins: 20px;
     --width: 35vw;
 }
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -61,15 +62,14 @@ body {
     width: 30px;
 }
 
-i {
+.material-icons i {
     margin-right: 5px;
 }
 
 span {
     align-items: flex-end;
     display: flex;
-    margin:
-        10px 5px;
+    margin: 10px 5px;
 }
 
 .flex-cards-description {
