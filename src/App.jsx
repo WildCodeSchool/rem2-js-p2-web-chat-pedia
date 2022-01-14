@@ -15,16 +15,15 @@ function App() {
 
   return (
     <div className="App">
-        <NavBar/>
-        <Routes>
-          <Route exact path="/" element={< Home />} />
-          <Route path="depot" element={< Deposit />} />
-          <Route path="login" element={< Login />} />
-        </Routes>
-        <SearchBar />
-      <Scroll/>
+      <NavBar />
+      <Routes>
+        <Route exact path="/" element={< Home />} />
+        <Route path="depot" element={< Deposit />} />
+        <Route path="login" element={< Login />} />
+      </Routes>
+      <SearchBar />
+      <Scroll />
       <div className="viewport-modifier">
-        <h1>Wikipawdia</h1>
         {/* <AssetsFilter/> */}
         <GetCards />
         <Footer />
@@ -32,6 +31,6 @@ function App() {
     </div>
   )
 }
-     
+
 
 export default App;
