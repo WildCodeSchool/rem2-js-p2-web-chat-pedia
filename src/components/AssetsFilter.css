@@ -1,0 +1,32 @@
+.filters-box {
+    background-color: rgba(241, 99, 98, 0.2);
+    border-radius: var(--border-radius);
+    margin: var(--padding-margins) 0px;
+    padding: 10px var(--padding-margins);
+    width: 400px;
+    transform: translate(-50px);
+    transition: 1s ease-in-out all;
+}
+
+.buttons-stylized {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button{
+    background: var(--background-gradient);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    color: var(--main-color-2);
+    margin: calc(var(--padding-margins)/3);
+    padding: 10px var(--padding-margins);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+button:focus {
+    background :rgb(170, 72, 72);
+}
