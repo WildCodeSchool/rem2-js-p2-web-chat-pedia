@@ -20,4 +20,15 @@
 
 npm-debug.log*
 yarn-debug.log*
+<<<<<<< HEAD
 yarn-error.log*
+
+src/assets
+
+src/components/GenerateCard.js
+src/components/GenerateCard.css
+src/components/GetCards.js
+src/components/GetCards.css
+=======
+yarn-error.log*
+>>>>>>> dev

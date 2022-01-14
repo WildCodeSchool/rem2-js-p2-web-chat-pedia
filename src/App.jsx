@@ -6,13 +6,13 @@ import Login from './pages/Login';
 import GetCards from './components/GetCards';
 import React from "react";
 import './App.css';
-import Scroll  from "./components/Scroll";
+import AssetsFilter from './components/AssetsFilter';
+import Scroll from "./components/Scroll";
 
 function App() {
-  
+
   return (
     <div className="App">
-      <header className="App-header">
         <NavBar/>
         <Routes>
           <Route exact path="/" element={< Home />} />
@@ -23,10 +23,10 @@ function App() {
       <Scroll/>
       <div className="viewport-modifier">
         <h1>Wikipawdia</h1>
+        <AssetsFilter/>
         <GetCards />
       </div>
     </div>
-    
   )
 }
 

@@ -11,16 +11,13 @@ function GenerateCard({ card }) {
     }
     return (
         <div className="GenerateCard" >
-
+            
             <div className="flex-cards-visual" style={{ backgroundImage: `url(${card.image})` }}>
-                {/* <span className="devtype-stylized">
-                    {card.devtype.map((devMap) => <li>{devMap}</li>)}
-                </span> */}
             </div>
 
             <div className="flex-cards-description">
                 <h3 className="card-title">{card.title}</h3>
-                <div>
+                <div className="format-stylized">
                     {(() => {
                         if (card.format.includes("Image")) {
                             return <span><i class="material-icons">image</i>{card.format}</span>

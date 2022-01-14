@@ -28,6 +28,7 @@ body {
     background-image: url(/src/assets/catbg2.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
+    text-align: center;
 }
 
 h1 {
