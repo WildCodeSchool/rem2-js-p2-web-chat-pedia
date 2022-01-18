@@ -4,6 +4,7 @@
     justify-content: space-evenly;
     transition: 0.5s ease all;
     width: calc(var(--width)*2.5);
+    margin-left: -40vw;
 }
 
 @media screen and (max-width: 1080px) {

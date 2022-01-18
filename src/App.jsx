@@ -19,9 +19,9 @@ function App() {
         <Route path="depot" element={< Deposit />} />
         <Route path="login" element={< Login />} />
       </Routes>
-      <div className='footer'>
+      {/* <div className='footer'> */}
         <Footer />
-      </div>
+      {/* </div> */}
     </div>
   )
 }
