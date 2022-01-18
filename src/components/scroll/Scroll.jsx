@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './Scroll.css';
-import logoFlèche from '../assets/arrowscroll.png'
+import logoFlèche from '../../assets/backtotop.png'
 
 
 const Scroll = () => {
@@ -9,7 +9,7 @@ const Scroll = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 300) {
+      if (window.pageYOffset > 10) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -17,18 +17,17 @@ const Scroll = () => {
     });
   }, []);
 
-  // This function will scroll the window to the top 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // for smoothly scrolling
+      behavior: 'smooth'
     });
   };
 
     return (
-        <div>
+        <div className="back-to-top">
             {showButton && (
-                <button onClick={scrollToTop} className="back-to-top">
+                <button onClick={scrollToTop}>
                     <img src={logoFlèche} alt="logo flèche"/>
                 </button>
       )}
