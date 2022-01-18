@@ -43,24 +43,6 @@ function SearchBar() {
                         </button>
                     </div>
                 </div>
-                {/* <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.image.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.image}</div>
-                    } )}
-                </div> */}
-                <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.language.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.language}</div>
-                    } )}
-                </div>
                 <div className='search_results'>
                     {cards
                     .filter((value) => {
@@ -70,60 +52,6 @@ function SearchBar() {
                         return <div className='search_result' key={value.id}>{value.title}</div>
                     } )}
                 </div>
-                {/* <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.link.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.link}</div>
-                    } )}
-                </div>
-                <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.description.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.description}</div>
-                    } )}
-                </div>
-                <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.devtype.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.devtype}</div>
-                    } )}
-                </div> */}
-                <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.tags.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.tags}</div>
-                    } )}
-                </div>
-                {/* <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.format.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.format}</div>
-                    } )}
-                </div>
-                <div className='search_results'>
-                    {cards
-                    .filter((value) => {
-                        return value.submitter.toLowerCase().includes(searchTerm.toLowerCase());
-                    })
-                    .map((value) => {
-                        return <div className='search_result' key={value.id}>{value.submitter}</div>
-                    } )}
-                </div> */}
             </form>
         </div>
     )

@@ -1,0 +1,22 @@
+.AssetsFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s ease-in-out all;
+}
+
+.filters-box-main, .filters-box {
+    background-color: rgba(228, 228, 228, 0.4);
+    border-radius: calc(var(--border-radius)/2);
+    margin: var(--padding-margins) 0px;
+    padding: 10px var(--padding-margins);
+    transform-origin: left center;
+    transition: slide 0.3s ease-in-out all;
+    width: 400px;
+}
+
+.buttons-stylized {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

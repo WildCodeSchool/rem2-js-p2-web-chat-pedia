@@ -1,28 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-
-:root {
-    --background-gradient : linear-gradient(var(--main-color-1) 0%,  var(--darken-main-color-1) 100%);;
-    --border-radius: 1em;
-    --border-top: 3px solid var(--main-color-1);
-    --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.315);
-    --main-color-1: rgb(241, 99, 98);
-    --darken-main-color-1: rgb(199, 82, 82);
-    --main-color-2: rgb(228, 228, 228);
-    --padding-margins: 20px;
-    --width: 35vw;
-}
-
-body {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: var(--padding-margins);
-}
-
 .GenerateCard {
-    background: -moz-linear-gradient(-55deg, var(--main-color-2) 0%, var(--main-color-2) 71%, #FFA2A5 100%);
-    background: -webkit-linear-gradient(-55deg, var(--main-color-2) 0%, var(--main-color-2)71%, #FFA2A5 100%);
-    background: linear-gradient(155deg, var(--main-color-2) 0%, var(--main-color-2) 71%, #FFA2A5 100%);
+    background: -moz-linear-gradient(-55deg, var(--main-color-2) 50%, var(--main-color-2) 71%, #FFA2A5 100%);
+    background: -webkit-linear-gradient(-55deg, var(--main-color-2) 50%, var(--main-color-2) 71%, #FFA2A5 100%);
+    background: linear-gradient(155deg, var(--main-color-2) 50%, var(--main-color-2) 71%, #FFA2A5 100%);
     border-bottom: var(--border-top);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -58,18 +37,11 @@ body {
 }
 
 .card-visual-row img {
-    height: auto;
-    width: 30px;
+    height: 42px;
 }
 
 .material-icons i {
     margin-right: 5px;
-}
-
-span {
-    align-items: flex-end;
-    display: flex;
-    margin: 10px 5px;
 }
 
 .flex-cards-description {
@@ -77,6 +49,7 @@ span {
     flex-direction: column;
     margin-left: 20px;
     width: 60%;
+    line-height: 3em;
 }
 
 .card-title {
@@ -101,10 +74,6 @@ span {
     text-align: center;
     text-transform: uppercase;
     width: 100%;
-}
-
-p {
-    line-height: 2em;
 }
 
 .asset-link {
