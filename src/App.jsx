@@ -10,6 +10,8 @@ import Footer from './components/Footer';
 import SearchBar from "./components/SearchBar";
 // import AssetsFilter from './components/AssetsFilter';
 import Scroll from "./components/Scroll";
+import Popup from './components/Popup';
+
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
         <GetCards />
         <Footer />
       </div>
+    
     </div>
   )
 }
