@@ -1,8 +1,9 @@
 .GetCards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     transition: 0.5s ease all;
+    width: calc(var(--width)*2.5);
 }
 
 @media screen and (max-width: 1080px) {
