@@ -3,20 +3,17 @@ import FlagFR from "../../assets/flag-fr.png"
 import FlagENG from "../../assets/flag-eng.png"
 import './GenerateCard.css'
 
-
 function GenerateCard({ card }) {
-
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
     return (
         <div className="GenerateCard" >
-            
             <div className="flex-cards-visual" style={{ backgroundImage: `url(${card.image})` }}>
             </div>
 
             <div className="flex-cards-description">
-                <h3 className="card-title">{card.title}</h3>
+                <h4 className="card-title">{card.title}</h4>
                 <div className="format-stylized">
                     {(() => {
                         if (card.format.includes("Image")) {
@@ -36,7 +33,6 @@ function GenerateCard({ card }) {
                 </div>
 
                 <p>{card.description}</p>
-                <p>Posté par : {card.submitter} le {card.date}</p>
             </div>
 
             <div className="card-visual-row">
@@ -50,9 +46,14 @@ function GenerateCard({ card }) {
                     </span>
                 }
 
-                <span><i class="material-icons">remove_red_eye</i>{getRandomInt(90) + 50}</span>
-                <span><i class="material-icons">comment</i>{getRandomInt(50)}</span>
-                <a className="asset-link" href={card.link} target="_blank" rel="noreferrer noopener">Link</a>
+                <span>
+                    <i class="material-icons">remove_red_eye</i>
+                    <i>{getRandomInt(90) + 50}</i>
+                </span>
+                <span>
+                    <i class="material-icons">comment</i><i>{getRandomInt(50)}</i>
+                </span>
+                <button><a className="asset-link" href={card.link} target="_blank" rel="noreferrer noopener">Link</a></button>
             </div>
         </div>
     )

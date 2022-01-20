@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import GetCards from '../cards/GetCards';
+import GenerateCard from '../cards/GenerateCard';
 import "./SearchBar.css"
 
 function SearchBar() {
