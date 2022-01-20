@@ -22,7 +22,8 @@
 
     margin: 20px 0px;
     overflow: hidden;
-    width: 800px;
+    width: 50vw;
+
 }
 
 .logo {
@@ -60,7 +61,22 @@
     /* margin: calc(var(--padding-margins)/3);
     padding: 10px var(--padding-margins); */
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     /* width: 150px; */
     cursor:pointer;
 }
+
+.input-visual {
+    background-color: white;
+    border-color: var(--main-color-1);
+    border-radius: 5px;
+    width: 250px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.input-visual:focus { 
+    outline: none;
+    border-color: var(--main-color-1);
+ }

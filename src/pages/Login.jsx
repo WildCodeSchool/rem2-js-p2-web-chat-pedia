@@ -25,9 +25,11 @@ const Login = () => {
                 </div>
                 <div className={signUpIsVisible ? "container-on" : "container-off"}>
                     <SignUpCard />
+                    <button className="light-button" onClick={() => (setLoginIsVisible(!loginIsVisible), setSignUpIsVisible(!signUpIsVisible))}>Retour au login</button>
                 </div>
                 <div className={lostPasswordIsVisible ? "container-on" : "container-off"}>
                     <LostPassword />
+                    <button className="light-button" onClick={() => (setLoginIsVisible(!loginIsVisible), setLostPasswordIsVisible(!lostPasswordIsVisible))}>Retour au login</button>
                 </div>
             </div>
         </div>

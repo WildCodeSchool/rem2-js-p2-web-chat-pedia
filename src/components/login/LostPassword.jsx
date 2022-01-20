@@ -12,7 +12,7 @@ const LostPassword = () => {
     return (
         <div>
             <form onSubmit={handleSubmit} className='form-container'>
-                <input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual'/>
                 <button className='valid-button' /*onClick={() => setIsUserLoggedIn(true)}*/>Lost password</button>
             </form>
         </div>
