@@ -6,7 +6,7 @@
 
   .ce-chat-engine {
     margin: 5px;
-    border: 6px rgba(199, 82, 82, 1) dotted;
+    border: 6px var(--darken-main-color-1) dotted;
     border-radius: 30px;
     background-color: transparent !important;
   }
@@ -21,7 +21,7 @@
   }
 
   .ce-chat-list {
-    border-right: 2px dotted rgba(199, 82, 82, 1) !important;
+    border-right: 2px dotted var(--darken-main-color-1) !important;
     background-color: transparent !important;
   }
 
@@ -30,8 +30,8 @@
   }
   
   .ce-active-chat-card {
-    background-color: rgba(241, 99, 98, 1) !important;
-    border: 4px solid rgba(241, 99, 98, 1) !important;
+    background-color: var(--main-color-1) !important;
+    border: 4px solid var(--main-color-1) !important;
   }
   
   .ce-chat-subtitle-text {
@@ -50,7 +50,7 @@
   
   .ce-primary-button {
     border-radius: 6px !important;
-    background-color:rgba(55, 55, 55, 1)  !important;
+    background-color: var(--main-color-3)  !important;
     position: relative;
     bottom: 1px;
   }
@@ -62,7 +62,7 @@
   
   .ce-settings {
     background-color: transparent !important;
-    border-left:2px dotted rgba(199, 82, 82, 1) !important;
+    border-left:2px dotted var(--darken-main-color-1) !important;
   }
   
   .ce-autocomplete-input {
@@ -102,15 +102,14 @@
   }
   
   .chat-title {
-    color: rgba(199, 82, 82, 1);
+    color: var(--darken-main-color-1);
     font-weight: 800;
     font-size: 24px;
     text-align: center;
   }
   
   .chat-subtitle {
-    color: rgba(199, 82, 82, 1);
-    font-weight: 600;
+    color: var(--darken-main-color-1);
     font-size: 12px;
     padding-top: 4px;
     text-align: center;
@@ -144,7 +143,7 @@
     font-size: 16px;
     border-radius: 6px;
     max-width: 60%;
-    background-color: rgba(241, 99, 98, 1) !important;
+    background-color: var(--main-color-1) !important;
   }
   
   .message-image {
@@ -176,10 +175,11 @@
   
   .message-form-container {
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
     width: calc(100% - 36px);
     padding: 18px;
     background-color: transparent !important;
+    width: 80%;
   }
   
   .message-form {
@@ -316,4 +316,51 @@
     color: white;
     text-align: center;
     margin-top: 20px;
+  }
+
+  .chat-feed::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .chat-feed::-webkit-scrollbar-track {
+    background:  rgba(241, 99, 98, 0.5);
+    opacity: 0.5 ; 
+    border-radius: 20px;
+  }
+
+  .chat-feed::-webkit-scrollbar-thumb {
+    background-color: var(--darken-main-color-1);
+    border-radius: 20px;
+  }
+
+  .ce-chat-list::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .ce-chat-list::-webkit-scrollbar-track {
+    background: rgba(241, 99, 98, 0.5);
+    opacity: 0.5 ; 
+    border-radius: 20px;
+    
+  }
+
+  .ce-chat-list::-webkit-scrollbar-thumb {
+    background-color: var(--darken-main-color-1);
+    border-radius: 20px;
+  }
+
+  .ce-settings::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .ce-settings::-webkit-scrollbar-track {
+    background:  rgba(241, 99, 98, 0.5);
+    opacity: 0.5 ; 
+    border-radius: 20px;
+  
+  }
+
+  .ce-settings::-webkit-scrollbar-thumb {
+    background-color: var(--darken-main-color-1);
+    border-radius: 20px;
   }
