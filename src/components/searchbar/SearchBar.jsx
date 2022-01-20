@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import GetCards from '../cards/GetCards';
+import GenerateCard from '../cards/GenerateCard';
 import "./SearchBar.css"
 
 function SearchBar() {
@@ -56,7 +56,7 @@ function SearchBar() {
                             searchedCard.title.includes(searchTerm)
                                 .map((resultCard) => (
                                     <div key={resultCard.id}>
-                                        <GetCards card={resultCard} />
+                                        <GenerateCard card={resultCard} />
                                     </div>
                         )))
                     :

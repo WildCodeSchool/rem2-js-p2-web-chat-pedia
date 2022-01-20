@@ -12,7 +12,7 @@ const Navbar = () => {
                     <img src={logo} alt="cat logo"/>
                 </ NavLink>
                 <NavLink to="/" className='title-container'>
-                    <p className="navbar-title">Wikipawdia</p>
+                    <h1 className="navbar-title">Wikipawdia</h1>
                 </ NavLink>
             </div>
             <div className='searchbar-component'>

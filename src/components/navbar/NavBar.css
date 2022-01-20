@@ -1,7 +1,5 @@
 .Navbar {
-    background: linear-gradient(
-        rgba(241, 99, 98, 0.3),
-        rgba(241, 99, 98, 0));
+    background: var(--background-gradient);
     display: flex;
     font-size: xx-large;
     justify-content: space-around;
