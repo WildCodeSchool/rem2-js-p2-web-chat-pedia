@@ -1,28 +1,36 @@
+import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import GenerateCard from '../cards/GenerateCard';
 import "./SearchBar.css"
 
 function SearchBar() {
-    const [cards, setCards] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
-    const [searchShow, setSearchShow] = useState(false);
 
-    useEffect(() => {
-        fetch("https://a.nacapi.com/AssetsDevList")
-            .then(response => response.json())
-            .then(data => setCards(data))
-            .catch(console.error)
-    }, []);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    // useEffect(() => {
+    //     fetch("https://a.nacapi.com/AssetsListP2")
+    //         .then(response => response.json())
+    //         .then(data => setCards(data))
+    //         .catch(console.error)
+    // }, []);
 
     const handleSearchTerm = (e) => {
         e.preventDefault();
         setSearchTerm(e.target.value);
     };
 
-    const activateSearch = (e) => {
-        e.preventDefault();
-        setSearchShow(true);
-    }
+    // const activateSearch = (e) => {
+    //     e.preventDefault();
+    //     cards &&
+    //         cards
+    //             .filter((searchedCard) =>
+    //                 searchedCard.title.includes(searchTerm))
+    //             .map((resultCard) =>
+    //                 <div key={resultCard.id}>
+    //                     <GetCards card={resultCard} />
+    //                 </div>
+    //             )
+    // }
 
     return (
         <div className="Searchbar">
@@ -34,34 +42,21 @@ function SearchBar() {
                                 type="text"
                                 placeholder="Rechercher"
                                 onChange={handleSearchTerm}
+                            // onKeyPress={(e) => e.key === 13}
                             />
                         </div>
                         <div className="searchbar-logo" id="s-cover">
-                            <button type="submit"
-                                onClick={() => activateSearch}>
-                                <div id="s-circle">
-                                </div>
-                                <span>
-                                </span>
-                            </button>
+                            <NavLink to="results" >
+                                <button type="submit">
+                                    <div id="s-circle">
+                                    </div>
+                                    <span>
+                                    </span>
+                                </button>
+                            </ NavLink>
                         </div>
                     </div>
                 </form>
-            </div>
-            <div className='search_results'>
-                {searchShow ?
-                    cards &&
-                    cards
-                        .filter((searchedCard) =>
-                            searchedCard.title.includes(searchTerm)
-                                .map((resultCard) => (
-                                    <div key={resultCard.id}>
-                                        <GenerateCard card={resultCard} />
-                                    </div>
-                        )))
-                    :
-                    null
-                }
             </div>
         </div>
     )
