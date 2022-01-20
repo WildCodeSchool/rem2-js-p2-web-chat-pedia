@@ -31,6 +31,10 @@ const Navbar = () => {
                     (navData.isActive ? "navigation-link selected" : "navigation-link")}>
                         <i className="material-icons">login</i>
                 </ NavLink>
+                <NavLink to="chat" className={(navData) =>
+                    (navData.isActive ? "navigation-link selected" : "navigation-link")}>
+                        <i className="material-icons">chat</i>
+                </ NavLink>
             </div>
         </div>
     )
