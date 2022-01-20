@@ -6,8 +6,6 @@
     justify-content: center;  
     align-items: center;
     flex-direction: column;
-
-
     background: -moz-linear-gradient(-55deg, var(--main-color-2) 0%, var(--main-color-2) 71%, #FFA2A5 100%);
     background: -webkit-linear-gradient(-55deg, var(--main-color-2) 0%, var(--main-color-2)71%, #FFA2A5 100%);
     background: linear-gradient(155deg, var(--main-color-2) 0%, var(--main-color-2) 71%, #FFA2A5 100%);
@@ -18,12 +16,9 @@
     display: flex;
     font-size: 13px;
     font-weight: 700;
-
-
     margin: 20px 0px;
     overflow: hidden;
     width: 50vw;
-
 }
 
 .logo {
@@ -58,11 +53,7 @@
     background: none;
     border:0;
     color: var(--main-color-1);
-    /* margin: calc(var(--padding-margins)/3);
-    padding: 10px var(--padding-margins); */
     text-align: center;
-    /* text-transform: uppercase; */
-    /* width: 150px; */
     cursor:pointer;
 }
 
@@ -79,4 +70,4 @@
 .input-visual:focus { 
     outline: none;
     border-color: var(--main-color-1);
- }
+}

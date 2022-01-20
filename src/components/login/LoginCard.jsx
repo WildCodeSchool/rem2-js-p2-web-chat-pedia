@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './LoginCard.css'
 
-
 const LoginCard = () => {
 
     const [email, setEmail] = React.useState('');
@@ -27,16 +26,12 @@ const LoginCard = () => {
         }
     }
 
-    
-
     const handleSubmit = (e) => {
     e.preventDefault();
     };
 
     return (
         <div className='LoginCard'>
-
-            
             <form onSubmit={handleSubmit} className='form-container'>
                 <div className='login-notification'>{isUserLoggedIn ? <p>Félicitation, vous êtes connecté</p> : <p>Connectez vous</p>}</div>
                 <div >

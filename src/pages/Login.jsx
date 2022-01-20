@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import logo from '../assets/logo.png'
 import LoginCard from '../components/login/LoginCard'
 import LostPassword from '../components/login/LostPassword'
@@ -7,13 +7,9 @@ import SignUpCard from '../components/login/SignUpCard'
 import './Login.css'
 
 const Login = () => {
-
     const [loginIsVisible, setLoginIsVisible] = useState(true)
     const [signUpIsVisible, setSignUpIsVisible] = useState(false)
     const [lostPasswordIsVisible, setLostPasswordIsVisible] = useState(false)
-
-
-    
 
     return (
         <div className='Login'>
