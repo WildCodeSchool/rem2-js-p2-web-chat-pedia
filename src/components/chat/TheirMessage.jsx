@@ -1,16 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-const TheirMesage = ({lastMessage, message}) => {
+const TheirMessage = ({lastMessage, message}) => {
     const isFirstMessageByUser = !lastMessage || lastMessage.sender.username !== message.sender.username;
+
     return (
         <div className='message-row'>
             {isFirstMessageByUser && (
-                <div 
-                className='message-avatar'
-                style="{{backgroundImage:`url(${message?.sender?.avatar})`"
+                <div
+                    className='message-avatar'
+                    style={{backgroundImage: `url(${message?.sender?.avatar})`}}
                 />
             )}
-            {message?.attachments?.length>0 
+            {message?.attachments?.length>0
                 ? (
                     <img
                         src={message.attachments[0].file}
@@ -19,13 +20,14 @@ const TheirMesage = ({lastMessage, message}) => {
                         style={{marginLeft: isFirstMessageByUser ? '4px' : '48px'}}
                     />
                 ) : (
-                    <div className='message' style={{float:'left', backgroundColor:'rgba(55, 55, 55, 1)', marginLeft: isFirstMessageByUser ? '4px' : '48px' }}>
+                    <div className='message' style={{float: 'left', backgroundColor:'rgba(241, 99, 98, 1)', marginLeft: isFirstMessageByUser ? '4px' : '48px'}}>
                         {message.text}
                     </div>
                 )
+
             }
         </div>
     )
-}
+};
 
-export default TheirMesage
+export default TheirMessage;
