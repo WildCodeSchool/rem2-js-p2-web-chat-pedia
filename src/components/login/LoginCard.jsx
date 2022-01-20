@@ -9,24 +9,19 @@ const LoginCard = () => {
     const [password, setPassword] = React.useState('');
     const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(false);
     const [usersData, setUsersData] = useState([])
-    console.log(email)
-    // console.log(password)
-    console.log(isUserLoggedIn)
-
 
     useEffect(()=> {
-        fetch("https://a.nacapi.com/PawdiaUsers")
-        .then(response => response.json())
-        .then(data => setUsersData(data))
-        // .catch(console.error)
-        // console.log(usersData[0].username)
+    fetch("https://a.nacapi.com/PawdiaUsers")
+    .then(response => response.json())
+    .then(data => setUsersData(data))
+    .catch(console.error)
     }, [] );
-    // 
-    // console.log(usersData)
+
+    console.log(isUserLoggedIn)
 
     const LoginCheck = () => {
         for (let i = 0; i < usersData.length; i++) {
-            if ( (usersData[i].email = email) && (usersData[i].password = password) ) {
+            if ( (usersData[i].email === email) && (usersData[i].password === password) ) {
                 setIsUserLoggedIn(true)
             } else {console.log("erreur")}
         }
@@ -35,7 +30,7 @@ const LoginCard = () => {
     
 
     const handleSubmit = (e) => {
-       e.preventDefault();
+    e.preventDefault();
     };
 
     return (
