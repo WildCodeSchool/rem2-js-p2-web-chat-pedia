@@ -14,8 +14,6 @@ const Home = () => {
                 <p>- La barre de recherche</p>
                 <p>- Les boutons ci-contre</p>
                 <div >
-                    <h1 className='texte'>suggestion!</h1>
-                    <p className='texte'>Les actualités de la semaine :</p>
                      <Slider /> 
                 </div>
             </div>
