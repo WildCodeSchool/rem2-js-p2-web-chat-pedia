@@ -1,6 +1,6 @@
 import React from "react";
-import FlagFR from "../assets/flag-fr.png"
-import FlagENG from "../assets/flag-eng.png"
+import FlagFR from "../../assets/flag-fr.png"
+import FlagENG from "../../assets/flag-eng.png"
 import './GenerateCard.css'
 
 
@@ -34,7 +34,6 @@ function GenerateCard({ card }) {
                     }
                     )()}
                 </div>
-
 
                 <p>{card.description}</p>
                 <p>Posté par : {card.submitter} le {card.date}</p>

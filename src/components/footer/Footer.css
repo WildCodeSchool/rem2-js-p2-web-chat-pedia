@@ -1,0 +1,39 @@
+.Footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--main-color-1) 0%, var(--darken-main-color-1) 100%);
+  color: rgb(228, 228, 228);
+  height: 150px;
+  margin-top: 400px;
+}
+
+.contact-container {
+  display:flex;
+  flex-direction: column;
+}
+
+.container-personel {
+  display: flex;
+  justify-content: center;
+}
+
+.personel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 30px;
+}
+
+.icon-personel {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-personel a {
+  margin: 0px 10px 0px 0px;
+  text-decoration: none;
+  color: rgb(228, 228, 228);
+  font-size: 30px;
+}

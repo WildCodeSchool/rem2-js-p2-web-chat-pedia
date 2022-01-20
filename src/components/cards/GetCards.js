@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import GenerateCard from './GenerateCard';
 import "./GetCards.css"
 
-function GetCards() {
+function GetCards({ devtype, tags, format }) {
   const [cards, setCards] = useState([]);
   
   useEffect(()=> {
@@ -16,13 +16,17 @@ function GetCards() {
     <div className="GetCards">
       {
       cards &&
-      cards.map((card) => (
-        <div key= {card.id}>
-          <GenerateCard card={card}/>
+      cards
+      .filter((searchedCard) =>
+        searchedCard.devtype.includes(devtype)
+        && searchedCard.tags.includes(tags)
+        && searchedCard.format.includes(format))
+      .map((resultCard) => (
+        <div key= {resultCard.id}>
+          <GenerateCard card={resultCard}/>
         </div>
       ))
       }
-        
     </div>
   );
 }
