@@ -1,142 +1,114 @@
+import GenerateCard from '../cards/GenerateCard'
 import React from 'react'
-import { useState } from 'react'
-import GetCards from '../cards/GetCards';
+import { useState, useEffect } from 'react'
 import './AssetsFilter.css'
+import Test from '../../assets/flag-fr.png'
+import Test2 from '../../assets/backtotop.png'
+import Test3 from '../../assets/flag-eng.png'
+
 
 const AssetsFilter = () => {
-    const [typeDevClicked, setTypeDevClicked] = useState('');
-    const [techClicked, setTechClicked] = useState(false);
-    const [formatSelected, setFormatSelected] = useState(false);
-    const [searchedDevType, setSearchedDevType] = useState('');
-    const [searchedTags, setSearchedTags] = useState('');
-    const [searchedFormat, setSearchedFormat] = useState('');
+    const [devClicked, setDevClicked] = useState('')
+    const [techClicked, setTechClicked] = useState('')
+    const [formatClicked, setFormatClicked] = useState('')
 
-//     import React from 'react'
-// import { useState, useEffect } from 'react'
-// import { useParams } from 'react-router-dom'
-// import axios from 'axios';
+    const [cards, setCards] = useState([]);
 
-// const AnimalDetails = () => {
-//     const [animalInfos, setAnimalInfos] = useState([]);
-//     const [search, setSearch] = useState('');
-//     const params = useParams();
-
-//     useEffect(() => {
-//         axios
-//         .get(`https://a.nacapi.com/zoolive/${params.id}`)
-//         .then((res) => {
-//             setAnimalInfos(res.data)
-//         })
-//     }, [])
-
-//     return (
-//         <div>
-//             <h1>Coucou</h1>
-//             {animalInfos.name}
-//         </div>
-//     )
-// }
-
-// export default AnimalDetails
-
+    useEffect(() => {
+        fetch("https://a.nacapi.com/AssetsListP2")
+            .then(response => response.json())
+            .then(data => setCards(data))
+            .catch(console.error)
+    }, []);
 
     const buttons = [
         [
-            "front",
-            ["html", "css", "javascript", "scss", "react", "git|github"]
+            'front',
+            ['html', 'CSS', 'Javascript', 'Node', 'React', 'Git', 'Github']
         ],
         [
-            "back",
-            ["mysql", "express", "git|github", "BDD"]
+            'back',
+            ['BDD', 'Express', 'MySQL', 'Git', 'Github']
         ],
         [
-            "format",
-            ["site internet", "vidéo", "image", "diaporama"]
+            'format',
+            ['Diaporama', 'Image', 'Site Internet', 'Vidéo']
         ]
     ]
+
+    const resetFilters = () => {
+        setTechClicked('');
+        setFormatClicked('');
+    }
 
     return (
         <div className="AssetsFilter">
             <div className="filters-box-main">
                 <p>Ton projet porte sur quel type de dev ?</p>
                 <div className="buttons-stylized">
-                    <button onClick={() => {
-                        setTypeDevClicked(buttons[0][0]);
-                        setTechClicked(false);
-                        setSearchedDevType("front");
-                    }}>
+                    <button onClick={() => { setDevClicked(`${buttons[0][0]}`); resetFilters() }}>
                         {buttons[0][0]}
                     </button>
 
-                    <button onClick={() => {
-                        setTypeDevClicked(buttons[1][0]);
-                        setTechClicked(false);
-                        setSearchedDevType("back");
-                    }}>
-                        {buttons[1][0]}
-                    </button>
+                    <button onClick={() => { setDevClicked(`${buttons[1][0]}`); resetFilters() }}>{buttons[1][0]}</button>
                 </div>
             </div>
 
-            <div className="second-filter">
-                {typeDevClicked === "front" ?
-                    <div className="filters-box">
-                        <p>
-                            Ok ! Sur quelle technologie travailles-tu ?
-                        </p>
-                        <div className="buttons-stylized">
-                            {buttons[0][1].map((button) =>
-                                <button onClick={() => {
-                                    setTechClicked(true);
-                                    setSearchedTags("CSS");
-                                }}>
-                                    {button}
-                                </button>)}
-                        </div>
+            {devClicked === 'front' ?
+                <div className="filters-box-main">
+                    <p>Ok ! Sur quelle techno ?</p>
+                    <div className="buttons-stylized">
+                        {buttons[0][1].map((button) => <button onClick={() => setTechClicked(`${button}`)}>{button}</button>)}
                     </div>
-                    :
-                    null
-                }
-                {typeDevClicked === 'back' ?
-                    <div className="filters-box">
-                        <p>
-                            Ok ! Sur quelle technologie travailles-tu ?
-                        </p>
-                        <div className="buttons-stylized">
-                            {buttons[1][1].map((button) =>
-                                <button onClick={() => {
-                                    setTechClicked(true);
-                                    setSearchedTags("mysql");
-                                }}>
-                                    {button}
-                                </button>)}
-                        </div>
-                    </div>
-                    :
-                    null
-                }
-                {techClicked ?
-                    <div className="filters-box">
-                        <p>
-                            Ca marche ! Quel format t'aiderait le plus ?
-                        </p>
-                        <div className="buttons-stylized">
-                            {buttons[2][1].map((button) =>
-                                <button onClick={() => {
-                                    setFormatSelected(true);
-                                    setSearchedFormat("Site Internet");
-                                }}>
-                                    {button}
-                                </button>)}
-                        </div>
-                    </div>
-                    :
-                    null
-                }
-            </div>
-            {formatSelected ?
-                <GetCards devtype={searchedDevType} tags={searchedTags} format={searchedFormat} /> : null
+                </div>
+                :
+                null
             }
+
+            {devClicked === 'back' ?
+                <div className="filters-box-main">
+                    <p>Ok! Sur quelle techno ?</p>
+                    <div className="buttons-stylized">
+                        {buttons[1][1].map((button) => <button onClick={() => setTechClicked(`${button}`)}>{button}</button>)}
+                    </div>
+                </div>
+                :
+                null
+            }
+
+            {techClicked !== '' ?
+                <div className="filters-box-main">
+                    <p>Ca marche ! Avec quel format es-tu le plus à l'aise ?</p>
+                    <div className="buttons-stylized">
+                        {buttons[2][1].map((button) => <button onClick={() => setFormatClicked(`${button}`)}>
+                            {button}
+                        </button>)}
+                    </div>
+                </div>
+                :
+                null
+            }
+
+            {formatClicked !== "" ?
+                <div className="display-cards-flex">
+                    {
+                        cards &&
+                        cards
+                            .filter((searchedCard) =>
+                                searchedCard.devtype.includes(devClicked)
+                                && searchedCard.tags.includes(techClicked)
+                                && searchedCard.format.includes(formatClicked))
+                            .map((resultCard) =>
+                                <div key={resultCard.id}>
+                                    <GenerateCard card={resultCard} />
+                                </div>
+                            )
+                    }
+                </div>
+                :
+                null
+            }
+
         </div>
     )
 }
