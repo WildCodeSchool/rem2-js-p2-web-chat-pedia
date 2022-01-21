@@ -1,0 +1,43 @@
+.AssetsFilter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s ease-in-out all;
+}
+
+.filters-box-main, .filters-box {
+    background: var(--background-gradient);
+    border-radius: calc(var(--border-radius)/2);
+    margin: calc(var(--padding-margins)/2) 0px;
+    padding: 5px var(--padding-margins);
+    transform-origin: left center;
+    width: 400px;
+}
+
+.buttons-stylized {    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.buttons-stylized button {
+    background: var(--main-color-3);
+    border: 0;
+    border-radius: var(--border-radius);
+    color: var(--main-color-2);
+    margin: calc(var(--padding-margins)/3);
+    padding: 10px var(--padding-margins);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+.display-cards-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transition: 0.5s ease all;
+    width: calc(var(--width)*2.3);
+    margin: 30px 0px 0px -40vw;
+}

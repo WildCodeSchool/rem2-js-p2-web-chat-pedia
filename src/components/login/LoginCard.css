@@ -1,0 +1,13 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.colored-icons {
+    color: var(--main-color-1)
+}
+
+.login-notification {
+    display: flex;
+    height: 30px;
+}

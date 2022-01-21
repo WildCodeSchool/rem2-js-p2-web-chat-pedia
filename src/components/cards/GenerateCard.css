@@ -1,0 +1,112 @@
+.GenerateCard {
+    background: rgba(255, 255, 255, 0.2);
+    border-bottom: var(--border-top);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    flex-wrap: wrap;
+    height: 310px;
+    margin: 20px 0px;
+    overflow: hidden;
+    transform: perspective(1500px) rotateY(25deg);
+    transition: transform 0.5s ease 0s;
+    width: var(--width);
+}
+
+.GenerateCard:hover {
+    transform: rotateY(0deg);
+}
+
+.flex-cards-visual {
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    width: 30%;
+    height: 80%;
+}
+
+.card-visual-row {
+    align-items: center;
+    align-self: flex-end;
+    background: var(--main-color-1);
+    border-top: var(--border-top);
+    color: var(--main-color-2);
+    display: flex;
+    height: 60px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card-visual-row span {
+    display: flex;
+    align-items: center;
+}
+
+.card-visual-row i {
+    margin-left: 8px;
+}
+
+.card-visual-row img {
+    height: 30px;
+}
+
+.material-icons i {
+    margin-right: 5px;
+}
+
+.flex-cards-description {
+    color: var(--main-color-3);
+    margin-left: 20px;
+    line-height: 2.5em;
+    text-align: left;
+    width: 60%;
+}
+
+.card-title {
+    font-size: 15px;
+    margin: var(--padding-margins) 0px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+
+.format-stylized {
+    width: 100%;
+}
+
+.format-stylized li {
+    color: var(--main-color-2);
+}
+
+.asset-link {
+    background: var(--main-color-3);
+    border:0;
+    border-radius: var(--border-radius);
+    color: var(--main-color-2);
+    padding: 10px var(--padding-margins);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 150px;
+}
+
+@media screen and (max-width: 760px) {
+    .GenerateCard {
+        height: 420px;
+    }
+
+    .flex-cards-visual {
+        height: 85%;
+    }
+
+    .card-title {
+        white-space: normal;
+    }
+
+    .card-visual-row {
+        height: 60px;
+    }
+
+}

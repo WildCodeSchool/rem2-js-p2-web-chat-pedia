@@ -1,0 +1,24 @@
+.Home {
+    display: flex;
+    justify-content: space-evenly;
+    height:min-content;
+}
+
+.home-content, .home-content-assets {
+    margin: 0px -10vw;
+    width: calc(var(--width)*1);
+}
+
+.home-img {
+    width: 30vw;
+    height: auto;
+}
+
+.news-container{
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    line-height: 2em;
+}
