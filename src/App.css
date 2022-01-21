@@ -1,30 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 :root {
-    --background-gradient : linear-gradient(var(--main-color-1) 0%,  var(--darken-main-color-1) 50%);
+    --background-gradient : linear-gradient(
+        rgba(241, 99, 98, 0.3),
+        rgba(241, 99, 98, 0));
     --border-radius: 2em;
     --border-top: 3px solid var(--main-color-1);
     --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.315);
     --main-color-1: rgba(241, 99, 98, 1);
     --darken-main-color-1: rgba(199, 82, 82, 1);
     --main-color-2: rgba(255, 255, 255, 1);
-    --main-color-3: rgba(55, 55, 55, 1);
+    --main-color-3: rgba(51, 44, 63, 1);
     --padding-margins: 20px;
     --width: 35vw;
 }
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    background-image: url(/src/assets/catbg2.jpg);
-    background-repeat: repeat;
     background-attachment: fixed;
+    background-image: url(/src/assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    transition: 0.5s ease all;
+    transition: slide 0.3s ease-in-out all;
 }
 
 h1, h2 {
@@ -34,23 +37,17 @@ h1, h2 {
 	-webkit-text-fill-color: transparent;
     font-size: xx-large;
     font-weight: 1000;
+    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.Home button {
-    background: var(--main-color-1);
-    border:0;
-    border-radius: var(--border-radius);
-    color: var(--main-color-2);
-    margin: calc(var(--padding-margins)/3);
-    padding: 10px var(--padding-margins);
-    text-align: center;
-    text-decoration: none;
+h3 {
+    font-size: larger;
+    font-weight: 700;
     text-transform: uppercase;
-    width: 150px;
 }
 
-/* .footer {
-    position: relative;
-    bottom: 0;
-} */
+button {
+    background: none;
+    border: 0;
+}

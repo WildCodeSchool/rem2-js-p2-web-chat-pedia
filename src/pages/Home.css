@@ -1,20 +1,24 @@
 .Home {
     display: flex;
     justify-content: space-evenly;
-    margin: var(--padding-margins) 0px;
-    height: 60vh;
+    height:min-content;
 }
 
-.home-content {
-    width: var(--width);
+.home-content, .home-content-assets {
     margin: 0px -10vw;
+    width: calc(var(--width)*1);
 }
 
 .home-img {
-    width: 25vw;
+    width: 30vw;
     height: auto;
 }
 
 .news-container{
     margin-top: 100px;
+    margin-bottom: 15px;
+}
+
+.home-content p {
+    line-height: 2em;
 }
