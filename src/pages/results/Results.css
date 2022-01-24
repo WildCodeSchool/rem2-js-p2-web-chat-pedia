@@ -1,0 +1,16 @@
+.go-home-button {
+    width : 3vw;
+    position: absolute;
+    left : 4vw;
+}
+
+.results-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 20vw;
+    width: calc(var(--width)*2);
+}
+
+.results-cards-cat {
+    margin : 40px;
+}

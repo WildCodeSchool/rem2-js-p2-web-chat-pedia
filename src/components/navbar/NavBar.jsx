@@ -29,7 +29,7 @@ const Navbar = () => {
                 </ NavLink>
                 <NavLink to="login" className={(navData) =>
                     (navData.isActive ? "navigation-link selected" : "navigation-link")}>
-                        <i className="material-icons">login</i>
+                        <i className="material-icons">account_circle</i>
                 </ NavLink>
                 <NavLink to="chat" className={(navData) =>
                     (navData.isActive ? "navigation-link selected" : "navigation-link")}>
