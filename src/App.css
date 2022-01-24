@@ -7,12 +7,14 @@
     --border-radius: 2em;
     --border-top: 3px solid var(--main-color-1);
     --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.315);
+    --heights: 50vh;
     --main-color-1: rgba(241, 99, 98, 1);
     --darken-main-color-1: rgba(199, 82, 82, 1);
     --main-color-2: rgba(255, 255, 255, 1);
     --main-color-3: rgba(51, 44, 63, 1);
     --padding-margins: 20px;
-    --width: 35vw;
+    --width: 30vw;
+    --widths: 100%;
 }
 
 * {
@@ -27,7 +29,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    transition: slide 0.3s ease-in-out all;
 }
 
 h1, h2 {
@@ -50,4 +51,8 @@ h3 {
 button {
     background: none;
     border: 0;
+}
+
+input {
+    outline: none;
 }

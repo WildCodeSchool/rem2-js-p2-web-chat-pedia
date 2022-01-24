@@ -1,4 +1,14 @@
 .form-container{
     display: flex;
     flex-direction: column;
+    height: 200px;
+}
+
+
+.SignUpCard input {
+    background-color: var(--background-gradient);
+}
+
+.SignUpCard input:focus {
+    background-color: var(--main-color-2);
 }

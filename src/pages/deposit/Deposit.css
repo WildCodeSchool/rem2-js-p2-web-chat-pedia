@@ -1,0 +1,16 @@
+.Deposit {
+    height: 400px;
+}
+
+.Deposit h1, .Deposit h2, .Deposit img {
+    margin-bottom: 20px;
+}
+
+.Deposit img {
+    margin-top: 50px;
+    width: 300px;
+}
+
+.animateanimated.animate__zoomIn {
+        --animate-duration: 15s;
+}
