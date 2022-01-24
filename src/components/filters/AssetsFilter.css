@@ -9,7 +9,7 @@
     background: var(--background-gradient);
     border-radius: calc(var(--border-radius)/2);
     margin: calc(var(--padding-margins)/2) 0px;
-    padding: 5px var(--padding-margins);
+    padding: 2px var(--padding-margins);
     transform-origin: left center;
     width: 400px;
 }
@@ -40,4 +40,13 @@
     transition: 0.5s ease all;
     width: calc(var(--width)*2.3);
     margin: 30px 0px 0px -40vw;
+}
+
+.results-cards-cat {
+    width: 200px;
+    animation: scale(0.5);
+}
+
+.animate__animated.animate__fadeInRight {
+    animation-delay: 0.1s;
 }
