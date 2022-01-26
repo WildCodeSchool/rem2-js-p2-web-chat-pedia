@@ -28,6 +28,7 @@
   .ce-active-chat-card {
     background-color: var(--main-color-1) !important;
     border: 4px solid var(--main-color-1) !important;
+    font-family: 'Lato', sans-serif;
   }
   
   .ce-chat-subtitle-text {
@@ -36,12 +37,17 @@
   
   .ce-chat-form-container {
     padding-bottom: 20px !important;
+    background-color: transparent !important ;
+    font-family: 'Lato', sans-serif;
     
   }
   
-  .ce-text-input {
+  .ce-text-input , .ce-input {
     border-radius: 6px !important;
-    border: 1px solid #3b2a50 !important;
+    font-family: 'Lato', sans-serif;
+    font-size: 24px !important;
+    background-color:transparent ;
+
   }
   
   .ce-primary-button {
@@ -76,12 +82,26 @@
     display: none !important;
   }
   
+  .ce-section-title-container, .ce-photo-title-container {
+    background-color: transparent !important;
+    font-family: 'Lato', sans-serif;
+  }
+
+  #ce-options-drop-down {
+    background-color: transparent !important ;
+    font-family: 'Lato', sans-serif;
+  }
+
   /* CUSTOM FEED */
   
   .chat-feed {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     background-color: transparent !important;
+    overflow-y: scroll;
+    overflow-x: hidden;;
   }
   
   .chat-title-container {
@@ -102,6 +122,7 @@
     font-size: 12px;
     padding-top: 4px;
     text-align: center;
+    margin-bottom: 8px;
   }
   
   .message-row {
@@ -163,12 +184,13 @@
   }
   
   .message-form-container {
-    position: absolute;
+    /* position: absolute; */
     bottom: 5px;
-    width: calc(100% - 36px);
+    /* width: calc(100% - 36px); */
     padding: 18px;
     background-color: transparent !important;
     width: 80%;
+    margin-left: 33px;
   }
   
   .message-form {
