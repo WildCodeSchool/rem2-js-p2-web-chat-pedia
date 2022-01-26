@@ -5,23 +5,29 @@ import './ProfileCard.css'
 const ProfileCard = (props) => {
   const {userLoggedData, setUserLoggedData} = props;
 
-  return <div className='login-container'>
-    <h1>Profile</h1>
-    <div className='user-container'>
-      <img src={userLoggedData.avatar} alt={userLoggedData.username} className='avatar-logo'/>
-      <div className='user-description'>
-        <p>{userLoggedData.username}</p>
-        <p>Date de naissance : {userLoggedData.birthday}</p>
-        <p>profile : {userLoggedData.role}</p>
-        <div className='profile-avatar'>
-          <a href={userLoggedData.linkedin} target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin" ></i></a>
-          <a href={userLoggedData.github} target="_blank" rel="noopener noreferrer"><i className="fa fa-github" ></i></a>
-        </div>
-      </div>
-    </div>
-        <p>Tu pourras prochainement contribuer <Link to="/depot">ici</Link></p>
+  return <div >
+            <h1>Profil</h1>
+            <div className='ProfileCard'>
+              <div className="avatar-logo" style={{ backgroundImage: `url(${userLoggedData.avatar})` }}>
+              </div>
+              <div className='user-description'>
+                <h4 className="user-title">{userLoggedData.username}</h4>
+                <div className="user-info">
+                  <p><span class="material-icons">cake</span>{userLoggedData.birthday}</p>
+                  <p><span class="material-icons">assignment_ind</span> {userLoggedData.role}</p>
+                </div>
+              </div>
+              <div className='profile-bottom'>
+                <span>
+                  <a href={userLoggedData.linkedin} target="_blank" rel="noopener noreferrer" className='socials'><i className="fa fa-linkedin" ></i></a>
+                  <a href={userLoggedData.github} target="_blank" rel="noopener noreferrer" className='socials'><i className="fa fa-github" ></i></a>
+                </span>
+                <p></p>
+                <button className="link-button"><Link to="/depot">Contribuer</Link></button>
+              </div>
+            </div>
 
-  </div>;
+        </div>;
 };
 
 export default ProfileCard;
