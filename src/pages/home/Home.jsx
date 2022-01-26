@@ -7,26 +7,21 @@ import './Home.css'
 const Home = () => {
     return (
         <div className='Home'>
-            <div className='whats-left'>
-            <h2>Il reste quoi ?</h2>
-            <p>Searchbar vers results</p>
-            <p>Asynchroniser le tchat</p>
-            <p>Focus permanent boutons</p>
-            </div>
             <div className='home-content-container'>
                 <div className='home-content'>
                     <img src={CatWork} alt='chat au travail' className='animate__animated animate__tada'/>
                     <h1 className='welcome-title'>Bienvenue à toi, babe !</h1>
                     <p>Pour trouver une ressource, utilises au choix :</p>
                     <p>- La barre de recherche</p>
-                    <p>- Les boutons ci-contre</p>
+                    <p>- Les suggestions ci-contre</p>
+                    <p>- Les boutons ci-dessous</p>
                 </div>
                 <div className='home-content'>
-                    <AssetsFilter />
+                <Slider />
                 </div>
             </div>
-            <div className='slider-news'>
-                <Slider />
+            <div className='filters-content'>
+            <AssetsFilter />
             </div>
         </div>
     )

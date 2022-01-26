@@ -130,7 +130,6 @@ const AssetsFilter = () => {
                                     <img src={CatHunt0} alt="no result cat" className="results-cards-cat" />
                                 </div>
                                 </div>
-                                <p>Mais si tu trouves quelque chose à ce sujet, tu peux contribuer <NavLink to='/depot'>ici</NavLink></p>
                             </div>
                         }
                     </div>
