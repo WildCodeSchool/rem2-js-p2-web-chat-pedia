@@ -1,33 +1,90 @@
-.avatar-logo {
-    overflow:hidden;
-    border-radius:50%;
-    width:150px;
-    height:150px;
+.ProfileCard { background: rgba(255, 255, 255, 0.2);
+border-radius: var(--border-radius);
+box-shadow: var(--box-shadow);
+display: flex;
+font-size: 13px;
+font-weight: 700;
+flex-wrap: wrap;
+height: 310px;
+margin: 20px 0px;
+overflow: hidden;
+width: var(--width);
 }
 
-.user-container {
+.avatar-logo {
+    background-position: bottom;
+    background-size: cover;
     display: flex;
-    width: 70%;
-    justify-content: space-around;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    overflow: hidden;
+    width: 35%;
+    height: 80%;
 }
 
 .user-description{
+    color: var(--main-color-3);
+    margin-left: 20px;
+    line-height: 2.5em;
+    text-align: left;
+    width: 60%;
+}
+
+.user-title {
+    font-size: 15px;
+    margin: var(--padding-margins) 0px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+
+.user-info {
+    width: 100%;
+    
+}
+
+.profile-bottom {
+    align-items: center;
+    align-self: flex-end;
+    background: var(--main-color-1);
+    border-top: var(--border-top);
+    color: var(--main-color-2);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 60px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card-visual-row span {
+    display: flex;
     align-items: center;
 }
 
-.profile-avatar {
-    display: flex;
-    justify-content: space-evenly;
+.card-visual-row i {
+    margin-left: 8px;
 }
 
-.profile-avatar a {
+.card-visual-row img {
+    height: 30px;
+}
+
+.socials {
     margin: 0px 10px 0px 0px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 30px;
+}
+
+.link-button {
+    background: var(--main-color-3);
+    border:0;
+    border-radius: var(--border-radius);
+    color: white;
+    padding: 10px var(--padding-margins);
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    /* color: white; */
+}
+
+.link-button a {
+    text-decoration: none;
+    color: white;
 }

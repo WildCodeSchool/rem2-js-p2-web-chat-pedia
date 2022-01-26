@@ -5,11 +5,15 @@
     justify-content: space-around;
 }
 
-.input-line {
+.LoginCard input-line {
     display: flex;
     align-items: center;
 }
 
 .colored-icons {
     color: var(--main-color-3);
+}
+
+.LoginCard input-line:focus {
+    background-color: var(--main-color-2);
 }
