@@ -1,0 +1,33 @@
+.avatar-logo {
+    overflow:hidden;
+    border-radius:50%;
+    width:150px;
+    height:150px;
+}
+
+.user-container {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.user-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-avatar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-avatar a {
+    margin: 0px 10px 0px 0px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}

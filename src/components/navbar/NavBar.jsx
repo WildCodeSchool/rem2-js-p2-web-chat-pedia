@@ -3,7 +3,8 @@ import logo from '../../assets/logo.png'
 import SearchBar from '../searchbar/SearchBar';
 import "./NavBar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const {isUserLoggedIn} = props;
 
     return (
         <div className='Navbar'>
@@ -23,17 +24,18 @@ const Navbar = () => {
                     (navData.isActive ? "navigation-link selected" : "navigation-link")}>
                         <i className="material-icons">home</i>
                 </ NavLink>
+                {isUserLoggedIn ?
                 <NavLink to="depot" className={(navData) =>
                     (navData.isActive ? "navigation-link selected" : "navigation-link")}>
                         <i className="material-icons">cloud_upload</i>
+                </ NavLink> : null}
+                <NavLink to="chat" className={(navData) =>
+                    (navData.isActive ? "navigation-link selected" : "navigation-link")}>
+                        <i className="material-icons">chat</i>
                 </ NavLink>
                 <NavLink to="login" className={(navData) =>
                     (navData.isActive ? "navigation-link selected" : "navigation-link")}>
                         <i className="material-icons">account_circle</i>
-                </ NavLink>
-                <NavLink to="chat" className={(navData) =>
-                    (navData.isActive ? "navigation-link selected" : "navigation-link")}>
-                        <i className="material-icons">chat</i>
                 </ NavLink>
             </div>
         </div>

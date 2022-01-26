@@ -2,12 +2,13 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import './LoginCard.css'
 
-const LoginCard = () => {
+const LoginCard = (props) => {
 
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
-    const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(false);
-    const [usersData, setUsersData] = useState([])
+    const [usersData, setUsersData] = useState([]);
+    const {isUserLoggedIn, setIsUserLoggedIn} = props;
+    const {userLoggedData, setUserLoggedData} = props;
 
     useEffect(() => {
         fetch("https://a.nacapi.com/PawdiaUsers")
@@ -20,9 +21,12 @@ const LoginCard = () => {
         for (let i = 0; i < usersData.length; i++) {
             if ((usersData[i].email === email) && (usersData[i].password === password)) {
                 setIsUserLoggedIn(true)
+                setUserLoggedData(usersData[i])
             } else { console.log("erreur") }
         }
     }
+
+    console.log(userLoggedData.username)
 
     const handleSubmit = (e) => {
         e.preventDefault();

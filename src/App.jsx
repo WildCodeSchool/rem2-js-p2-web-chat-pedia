@@ -11,15 +11,18 @@ import Scroll from "./components/scroll/Scroll";
 import './App.css';
 
 function App() {
+  const [isUserLoggedIn, setIsUserLoggedIn] = React.useState(false)
+  const [userLoggedData, setUserLoggedData] = React.useState("")
+
   return (
     <div className="App">
       <Scroll />
-      <NavBar />
+      <NavBar isUserLoggedIn={isUserLoggedIn}/>
       <Routes>
         <Route exact path="/" element={< Home />} />
         <Route path="depot" element={< Deposit />} />
-        <Route path="login" element={< Login />} />
         <Route path="chat" element={< Chat />} />
+        <Route path="login" element={< Login isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn} userLoggedData={userLoggedData} setUserLoggedData={setUserLoggedData}/>} />
         <Route path="results/:query" element={< Results />} />
       </Routes>
       {/* <div className='footer'> */}
