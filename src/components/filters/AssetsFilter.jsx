@@ -1,14 +1,27 @@
-import { useState } from 'react'
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import CatHunt from '../../assets/cat-hunt.png'
+import CatHunt0 from '../../assets/cat-hunt-zero.png'
+import GenerateCard from '../cards/GenerateCard'
 import './AssetsFilter.css'
-import { useNavigate } from 'react-router-dom'
 
 
 const AssetsFilter = () => {
     const [devClicked, setDevClicked] = useState('')
     const [techClicked, setTechClicked] = useState('')
     const [formatClicked, setFormatClicked] = useState('')
-    let navigate = useNavigate();
+
+    const [cards, setCards] = useState([])
+
+    useEffect(() => {
+        fetch(
+            `https://a.nacapi.com/AssetsListP2`
+        )
+            .then(response => response.json())
+            .then(data => setCards(data))
+            .catch(console.error)
+    }, [])
 
     const buttons = [
         [
@@ -29,6 +42,16 @@ const AssetsFilter = () => {
         setTechClicked('');
         setFormatClicked('');
     }
+
+    const filteringCards =
+        cards &&
+        cards
+            .filter(
+                (searchedCard) =>
+                    searchedCard.devtype.includes(devClicked)
+                    && searchedCard.tags.includes(techClicked)
+                    && searchedCard.format.includes(formatClicked)
+            )
 
     return (
         <div className="AssetsFilter">
@@ -61,8 +84,8 @@ const AssetsFilter = () => {
                     <div className='animate__animated animate__fadeInRight'>
                         <div className="filters-box-main">
                             <p>Ok! Sur quelle techno ?</p>
-                            <div className="buttons-stylized">
-                                {buttons[1][1].map((button) => <button onClick={() => setTechClicked(`${button}`)}>{button}</button>)}
+                            <div className="buttons-stylized" id="">
+                                {buttons[1][1].map((button) => <button onClick={() => setTechClicked(`${button}`)}></button>)}
                             </div>
                         </div>
                     </div>
@@ -75,7 +98,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ca marche ! Avec quel format es-tu le plus à l'aise ?</p>
                             <div className="buttons-stylized">
-                                {buttons[2][1].map((button) => <button onClick={() => {setFormatClicked(`${button}`) ; navigate(`/results/${devClicked},${techClicked},${formatClicked}`)}}>
+                                {buttons[2][1].map((button) => <button onClick={() => setFormatClicked(`${button}`)}>
                                     {button}
                                 </button>)}
                             </div>
@@ -84,6 +107,36 @@ const AssetsFilter = () => {
                     :
                     null
                 }
+                {formatClicked != '' ?
+                    <div>
+                        {filteringCards.length !== 0 ?
+                            <div className='display-cards-flex'>
+                                <div className='display-cards-title'>
+                                <h1>Résultats de la chat-sse</h1>
+                                <div className='animate__animated animate__bounce animate__infinite'>
+                                    <img src={CatHunt} alt="results cat" className='results-cards-cat' />
+                                </div>
+                            </div>
+                                {filteringCards.map((resultCard, index) =>
+                                    <div key={index}>
+                                        <GenerateCard card={resultCard} />
+                                    </div>)}
+                            </div>
+                            :
+                            <div className='display-cards-flex'>
+                                <div className='display-cards-title'>
+                                <h1>Uh oh, rien pour le moment ...</h1>
+                                <div className='animate__animated animate__bounce animate__infinite'>
+                                    <img src={CatHunt0} alt="no result cat" className="results-cards-cat" />
+                                </div>
+                                </div>
+                                <p>Mais si tu trouves quelque chose à ce sujet, tu peux contribuer <NavLink to='/depot'>ici</NavLink></p>
+                            </div>
+                        }
+                    </div>
+                    :
+                    null
+            }
             </div>
         </div>
     )

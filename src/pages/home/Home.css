@@ -1,8 +1,11 @@
+.Home {
+    display: block;
+
+}
 .whats-left {
     position: absolute;
     color: grey;
 }
-
 
 .home-content-container {
     display: flex;
@@ -25,12 +28,7 @@
     align-self: center;
 }
 
-.news-container{
-    margin-top: 100px;
-}
-
 .slider-news {
-    display: flex;
     margin: 0px 25vw;
     padding-top: 20px;
     width: calc(var(--width)*2);
