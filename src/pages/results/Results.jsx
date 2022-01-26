@@ -14,7 +14,7 @@ const Results = ({ searchCard }) => {
     useEffect(() => {
         const fetchDataResult = () => {
             fetch(
-                `https://a.nacapi.com/AssetsListP2/?title=${params.query}`
+                `https://a.nacapi.com/AssetsListP2/?tags=${params.query}`
             )
                 .then(response => response.json())
                 .then(data => setCards(data))
@@ -23,20 +23,7 @@ const Results = ({ searchCard }) => {
         fetchDataResult();
     }, [params.query])
 
-    // const filteringCards = 
-    //     cards &&
-    //         cards
-    //             .filter((searchedCard) =>
-    //                 searchedCard.devtype.includes(devClicked)
-    //                 && searchedCard.tags.includes(techClicked)
-    //                 && searchedCard.format.includes(formatClicked))
-    //             .map((resultCard) => {
-    //                 return (
-    //                     <div key={resultCard.id}>
-    //                         <GenerateCard card={resultCard} />
-    //                     </div>
-    //                 )
-    //             })
+
 
     const searchingCards =
         cards &&

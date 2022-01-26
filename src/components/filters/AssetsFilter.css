@@ -1,5 +1,5 @@
 .AssetsFilter {
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items: center;
     transition: 1s ease-in-out all;
@@ -39,14 +39,22 @@
     justify-content: space-evenly;
     transition: 0.5s ease all;
     width: calc(var(--width)*2.3);
-    margin: 30px 0px 0px -40vw;
+    margin: 30px 0px 0px -35vw;
+}
+
+.display-cards-title {
+    display: flex;
+    align-items: center;
 }
 
 .results-cards-cat {
     width: 200px;
-    animation: scale(0.5);
 }
 
 .animate__animated.animate__fadeInRight {
     animation-delay: 0.1s;
+}
+
+.animate__animated.animate__bounce {
+    animation-duration: 5s;
 }
