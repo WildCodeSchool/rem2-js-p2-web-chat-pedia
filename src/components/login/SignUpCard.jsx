@@ -19,7 +19,7 @@ const SignUpCard = () => {
                 <input type="text" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual'/>
                 <input type="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual'/>
                 <input type="password" placeholder="Enter password again" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual'/>
-                <button className='valid-button'>Sign Up</button>
+                <button className="light-button">La création de compte sera prochainement disponible</button>
             </form>
             
         </div>
