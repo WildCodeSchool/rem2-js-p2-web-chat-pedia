@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import Logo from '../../assets/logo.png'
+import CatWork from '../../assets/cat-work.png'
 import LoginCard from '../../components/login/LoginCard'
 import LostPassword from '../../components/login/LostPassword'
 import ProfileCard from '../../components/login/ProfileCard'
@@ -23,8 +23,8 @@ const Login = (props) => {
                 </div>
             :
                 <div className='login-container'>
-                    <h1>Log in</h1>
-                    <div><img src={Logo} alt="cat logo" className='logo'/></div>
+                    <h3>Connectez-vous</h3>
+                    <div><img src={CatWork} alt='chat au travail' className='connection-cat'/></div>
                     <div className={loginIsVisible ? "container-on" : "container-off"}>
                         <LoginCard isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn} userLoggedData={userLoggedData}  setUserLoggedData={setUserLoggedData}/>
                         <button className="light-button" onClick={() => (setLoginIsVisible(!loginIsVisible), setSignUpIsVisible(!signUpIsVisible))}>Créer un compte ?</button>
