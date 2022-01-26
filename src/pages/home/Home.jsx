@@ -9,10 +9,8 @@ const Home = () => {
         <div className='Home'>
             <div className='whats-left'>
             <h2>Il reste quoi ?</h2>
-            <p>Cards vers results</p>
             <p>Searchbar vers results</p>
             <p>Asynchroniser le tchat</p>
-            <p>OnKeyPress SearchBar</p>
             <p>Focus permanent boutons</p>
             </div>
             <div className='home-content-container'>
