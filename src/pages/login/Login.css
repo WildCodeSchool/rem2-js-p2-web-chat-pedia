@@ -1,0 +1,73 @@
+.Login {
+    display: inline-block;
+    height: 400px;
+    }
+
+.login-container {
+    align-items: center;
+    background: var(--background-gradient);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    width: calc(var(--width)*2);
+}
+
+.logo {
+    width: 100px;
+}
+
+.container-off {
+    display: none;
+}
+
+.container-on {
+    display: flex;
+    flex-direction: column;
+}
+
+.valid-button {
+    padding: 10px var(--padding-margins);
+    border-radius: var(--border-radius);
+    background: var(--main-color-1);
+    color: var(--main-color-2);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor:pointer;
+    border:0;
+}
+
+.light-button {
+    background: none;
+    border:0;
+    cursor:pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.input-visual {
+    background-color: var(--background-gradient);
+    border-color: var(--main-color-1);
+    border-radius: 5px;
+    margin: 10px 20px 10px 10px;
+    padding: 5px;
+    text-align: center;
+    width: 250px;
+}
+
+.input-visual:focus { 
+    background-color: var(--main);
+    border-color: var(--main-color-1);
+    outline: none;
+}
+
+.input-visual:focus::placeholder {
+    color: transparent;
+    outline: none;
+}

@@ -28,17 +28,13 @@
     height: 100%;
 }
 
-.navbar-title {
-    background: linear-gradient(to bottom, var(--main-color-1) 0%, var(--darken-main-color-1) 100%);
-	background-clip: text;
-    -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    font-weight: 1000;
-    text-transform: uppercase;
-}
-
 .searchbar-component {
     align-self: center;
+    width: 30%;
+}
+
+.searchbar {
+    margin : 0px 40px;
 }
 
 .navigation {

@@ -1,18 +1,13 @@
-* {
-    font-family: 'Lato', sans-serif, Apple Color Emoji,
-      Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    letter-spacing: 0.5px;
-  }
-
   .ce-chat-engine {
     margin: 5px;
-    border: 6px var(--darken-main-color-1) dotted;
     border-radius: 30px;
     background-color: transparent !important;
+      font-family: 'Lato', sans-serif;
   }
 
   .ce-wrapper {
     margin: 15px !important;
+    
     background-color: transparent !important;
   }
 
@@ -27,6 +22,7 @@
 
   .ce-chats-container {
     background-color: transparent !important;
+    
   }
   
   .ce-active-chat-card {
@@ -76,12 +72,6 @@
     background-color: white !important;
   }
   
- 
-   .ce-chat-settings-container {
-    padding-top: 12px !important;
-    
-  }
-  
   .ce-chat-avatars-row {
     display: none !important;
   }
@@ -91,7 +81,6 @@
   .chat-feed {
     height: 100%;
     width: 100%;
-    overflow: scroll;
     background-color: transparent !important;
   }
   
@@ -227,15 +216,7 @@
     font-size: 14px;
   }
   
-  /* FORM STYLES */
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62,5%;
-  }
+
   
   .wrapper {
     height: 100vh;

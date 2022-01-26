@@ -1,0 +1,35 @@
+.Home {
+    display: block;
+
+}
+.whats-left {
+    position: absolute;
+    color: grey;
+}
+
+.home-content-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: min-content;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 460px;
+    margin: 0px -15vw;
+    width: calc(var(--width)*1.2);
+}
+
+.animate__tada {
+    width: 80%;
+    height: auto;
+    align-self: center;
+}
+
+.slider-news {
+    margin: 0px 25vw;
+    padding-top: 20px;
+    width: calc(var(--width)*2);
+}
