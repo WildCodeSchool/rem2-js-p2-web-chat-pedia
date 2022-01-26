@@ -28,7 +28,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='personel'>
-                        <p>Florent fevre</p>
+                        <p>Florent Lefevre</p>
                         <div className='icon-personel'>
                             <a href="https://www.linkedin.com/in/florent-Lefevre/" target="_blank"><i className="fa fa-linkedin" rel="noopener noreferrer"></i></a>
                             <a href="https://github.com/Florent-Lefevre" target="_blank"><i className="fa fa-github" rel="noopener noreferrer"></i></a>

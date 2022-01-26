@@ -1,14 +1,15 @@
-.ProfileCard { background: rgba(255, 255, 255, 0.2);
-border-radius: var(--border-radius);
-box-shadow: var(--box-shadow);
-display: flex;
-font-size: 13px;
-font-weight: 700;
-flex-wrap: wrap;
-height: 310px;
-margin: 20px 0px;
-overflow: hidden;
-width: var(--width);
+.ProfileCard { 
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    font-size: 13px;
+    font-weight: 700;
+    flex-wrap: wrap;
+    height: 310px;
+    margin: 20px 0px;
+    overflow: hidden;
+    width: 50vw;
 }
 
 .avatar-logo {
@@ -16,16 +17,17 @@ width: var(--width);
     background-size: cover;
     display: flex;
     overflow: hidden;
-    width: 35%;
+    width: 40%;
     height: 80%;
 }
 
 .user-description{
     color: var(--main-color-3);
     margin-left: 20px;
+    padding-left: 5vh;
     line-height: 2.5em;
     text-align: left;
-    width: 60%;
+    width: 50%;
 }
 
 .user-title {
@@ -81,7 +83,7 @@ width: var(--width);
     text-align: center;
     text-decoration: none;
     width: 150px;
-    /* color: white; */
+    cursor: pointer;
 }
 
 .link-button a {

@@ -11,7 +11,6 @@ const Login = (props) => {
     const [loginIsVisible, setLoginIsVisible] = useState(true)
     const [signUpIsVisible, setSignUpIsVisible] = useState(false)
     const [lostPasswordIsVisible, setLostPasswordIsVisible] = useState(false)
-    // const [userLoggedData, setUserLoggedData] = useState("")
     const {isUserLoggedIn, setIsUserLoggedIn} = props;
     const {userLoggedData, setUserLoggedData} = props;
 
