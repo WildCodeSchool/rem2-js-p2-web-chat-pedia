@@ -1,11 +1,9 @@
 .Slider {
-    padding-top: 30px;
     width: 80%;
 }
 
 .slider-container {
     height: 300px;
-    margin: auto;
     position: relative;
     overflow: hidden;
     top: 30px;
@@ -35,8 +33,9 @@
 }
 
 .text {
-    margin-top: 0px;
+    margin-bottom: 20px;
 }
+
 .slide-text {
     top: 65%;
     font-size: 2rem;
