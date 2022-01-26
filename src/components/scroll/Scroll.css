@@ -2,7 +2,6 @@
     bottom:18vh;
     background: transparent;
     border: 0;
-    cursor: pointer;
     position: fixed;
     right: 2%;
     z-index:1;
@@ -12,5 +11,6 @@
     background: transparent;
     width:50px;
     height:auto;
+    cursor: pointer;
 }
  
