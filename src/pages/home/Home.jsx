@@ -20,9 +20,7 @@ const Home = () => {
                 <Slider />
                 </div>
             </div>
-            <div className='filters-content'>
             <AssetsFilter />
-            </div>
         </div>
     )
 }

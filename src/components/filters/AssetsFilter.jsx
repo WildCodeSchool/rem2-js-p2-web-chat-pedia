@@ -55,6 +55,7 @@ const AssetsFilter = () => {
 
     return (
         <div className="AssetsFilter">
+            <div className='filter-container'>
             <div className='animate__animated animate__fadeInRight'>
                 <div className="filters-box-main">
                     <p>Ton projet porte sur quel type de dev ?</p>
@@ -107,35 +108,38 @@ const AssetsFilter = () => {
                     :
                     null
                 }
-                {formatClicked != '' ?
-                    <div>
-                        {filteringCards.length !== 0 ?
-                            <div className='display-cards-flex'>
-                                <div className='display-cards-title'>
-                                <h1>Résultats de la chat-sse</h1>
-                                <div className='animate__animated animate__bounce animate__infinite'>
-                                    <img src={CatHunt} alt="results cat" className='results-cards-cat' />
+                </div>
+                <div className='filter-results'>
+                    {formatClicked != '' ?
+                        <div>
+                            {filteringCards.length !== 0 ?
+                                <div className='display-cards-flex'>
+                                    <div className='display-cards-title'>
+                                    <h1>Résultats de la chat-sse</h1>
+                                    <div className='animate__animated animate__bounce animate__infinite'>
+                                        <img src={CatHunt} alt="results cat" className='results-cards-cat' />
+                                    </div>
                                 </div>
-                            </div>
-                                {filteringCards.map((resultCard, index) =>
-                                    <div key={index}>
-                                        <GenerateCard card={resultCard} />
-                                    </div>)}
-                            </div>
-                            :
-                            <div className='display-cards-flex'>
-                                <div className='display-cards-title'>
-                                <h1>Uh oh, rien pour le moment ...</h1>
-                                <div className='animate__animated animate__bounce animate__infinite'>
-                                    <img src={CatHunt0} alt="no result cat" className="results-cards-cat" />
+                                    {filteringCards.map((resultCard, index) =>
+                                        <div key={index}>
+                                            <GenerateCard card={resultCard} />
+                                        </div>)}
                                 </div>
+                                :
+                                <div className='display-cards-flex'>
+                                    <div className='display-cards-title'>
+                                    <h1>Uh oh, rien pour le moment ...</h1>
+                                    <div className='animate__animated animate__bounce animate__infinite'>
+                                        <img src={CatHunt0} alt="no result cat" className="results-cards-cat" />
+                                    </div>
+                                    </div>
                                 </div>
-                            </div>
-                        }
+                            }
+                        </div>
+                        :
+                        null
+                }
                     </div>
-                    :
-                    null
-            }
             </div>
         </div>
     )
