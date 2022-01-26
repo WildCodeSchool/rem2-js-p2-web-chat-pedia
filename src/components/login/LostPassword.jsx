@@ -12,8 +12,8 @@ const LostPassword = () => {
     return (
         <div className='LostPassword'>
             <form onSubmit={handleSubmit} className='form-container'>
-                <input type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual'/>
-                <button className='valid-button' /*onClick={() => setIsUserLoggedIn(true)}*/>Lost password</button>
+                <input type="text" placeholder="Entrer votre adresse mail" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual'/>
+                <button className='valid-button' /*onClick={() => setIsUserLoggedIn(true)}*/>Mot de passe perdu</button>
             </form>
         </div>
     )

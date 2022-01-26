@@ -36,27 +36,27 @@ const LoginCard = (props) => {
         <div className='LoginCard'>
             <form onSubmit={handleSubmit} className='form-container'>
                 <div className='login-notification'>{isUserLoggedIn ?
-                    <p>Félicitation, vous êtes connecté</p>
+                    <p>Félicitations, vous êtes connecté</p>
                     :
-                    <p>Connectez vous</p>}
+                    null}
                 </div>
 
                 <div className='input-line'>
                     <label htmlFor="text">
                         <i className="material-icons colored-icons">account_circle</i>
                     </label>
-                    <input type="text" id="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual' />
+                    <input type="text" id="text" placeholder="Entrer votre adresse mail" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual' />
                 </div>
 
                 <div className='input-line'>
                     <label htmlFor="password">
                         <i className="material-icons colored-icons">lock</i>
                     </label>
-                    <input type="password" id="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual' />
+                    <input type="password" id="password" placeholder="Entrer votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual' />
                 </div>
 
                 <button className='valid-button' onClick={LoginCheck}>
-                    log in
+                    Se connecter
                 </button>
             </form>
         </div>
