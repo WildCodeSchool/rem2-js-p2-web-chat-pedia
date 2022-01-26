@@ -14,8 +14,3 @@
     width: 40%;
     align-self: center;
 }
-
-.filters-content {
-    margin: 40px 15vw;
-    width: calc(var(--width)*2);
-}
