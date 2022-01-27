@@ -60,11 +60,11 @@ const AssetsFilter = () => {
                 <div className="filters-box-main">
                     <p>Ton projet porte sur quel type de dev ?</p>
                     <div className="buttons-stylized">
-                        <button type='button' onClick={() => { setDevClicked(`${buttons[0][0]}`); resetFilters() }}>
+                        <button type='button' onClick={(e) => { setDevClicked(`${buttons[0][0]}`); resetFilters(e) }}>
                             {buttons[0][0]}
                         </button>
 
-                        <button type='button' onClick={() => { setDevClicked(`${buttons[1][0]}`); resetFilters() }}>{buttons[1][0]}</button>
+                        <button type='button' onClick={(e) => { setDevClicked(`${buttons[1][0]}`); resetFilters(e) }}>{buttons[1][0]}</button>
                     </div>
                 </div>
 
@@ -99,7 +99,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ca marche ! Avec quel format es-tu le plus à l'aise ?</p>
                             <div className="buttons-stylized">
-                                {buttons[2][1].map((button) => <button type='button' onClick={() => setFormatClicked(`${button}`)}>
+                                {buttons[2][1].map((button) => <button type='button' onClick={(e) => {e.preventDefault(); setFormatClicked(`${button}`)}}>
                                     {button}
                                 </button>)}
                             </div>
