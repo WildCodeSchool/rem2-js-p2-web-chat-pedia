@@ -22,7 +22,7 @@ const Login = (props) => {
                 </div>
             :
                 <div className='login-container'>
-                    <h3>Connectez-vous</h3>
+                    <h3 className='login-title'>Connectez-vous</h3>
                     <div><img src={CatWork} alt='chat au travail' className='connection-cat'/></div>
                     <div className={loginIsVisible ? "container-on" : "container-off"}>
                         <LoginCard isUserLoggedIn={isUserLoggedIn} setIsUserLoggedIn={setIsUserLoggedIn} userLoggedData={userLoggedData}  setUserLoggedData={setUserLoggedData}/>
