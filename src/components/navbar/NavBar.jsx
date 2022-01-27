@@ -10,7 +10,7 @@ const Navbar = (props) => {
         <div className='Navbar'>
             <div className='navbar-logo-title'>
                 <NavLink to="/">
-                    <img src={logo} alt="cat logo"/>
+                    <img className="navbar-logo" src={logo} alt="cat logo"/>
                 </ NavLink>
                 <NavLink to="/" className='title-container'>
                     <h1 className="navbar-title">Wikipawdia</h1>

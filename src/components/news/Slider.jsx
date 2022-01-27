@@ -23,20 +23,22 @@ function Slider(props) {
 
   return (
     <div className='Slider'>
+      <div className='animate__animated animate__fadeInRight'>
       <h1 className='text'>suggestions</h1>
       <p>Les actualités de la semaine :</p>
-    <div className="slider-container">
-      <SliderContent activeIndex={activeIndex} sliderImage={sliderImage} />
-      <Arrows
-        prevSlide={() =>
-          setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)
-        }
-        nextSlide={() =>
-          setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
-        }
-      />
+      <div className="slider-container">
+        <SliderContent activeIndex={activeIndex} sliderImage={sliderImage} />
+        <Arrows
+          prevSlide={() =>
+            setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)
+          }
+          nextSlide={() =>
+            setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
+          }
+        />
+      </div>
     </div>
-    </div>
+    </div >
   );
 }
 

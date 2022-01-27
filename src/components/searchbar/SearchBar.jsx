@@ -1,14 +1,29 @@
-import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import SearchResults from './SearchResults'
 import "./SearchBar.css"
 
 function SearchBar() {
-    const [searchCard, setSearchCard] = useState('')
-    let navigate = useNavigate()
+    const [searchTerm, setSearchTerm] = useState('')
+    const [searchDisplay, setSearchDisplay] = useState(false)
 
-    function goToResults() {
-         navigate(`/results/${searchCard}`);
-    }
+    const [cards, setCards] = useState([])
+
+    useEffect(() => {
+        fetch(
+            `https://a.nacapi.com/AssetsListP2`
+        )
+            .then(response => response.json())
+            .then(data => setCards(data))
+            .catch(console.error)
+    }, [])
+
+    const searchingCards =
+        cards &&
+        cards
+            .filter(
+                (searchedCard) =>
+                    searchedCard.title.toLowerCase().includes(searchTerm.toLowerCase()
+                    ))
 
     return (
         <div className="Searchbar">
@@ -19,22 +34,21 @@ function SearchBar() {
                             <input
                                 type="text"
                                 placeholder="Rechercher"
-                                onChange={(e) => setSearchCard(e.target.value)}
-                                value={searchCard}
-                                // onKeyPress={(e) => searchCard !== '' && e.key === 13 ? goToResults() : null}
+                                onChange={(e) => { setSearchTerm(e.target.value); setSearchDisplay(false) }}
+                                value={searchTerm}
                             />
                         </div>
 
-                        {searchCard !== '' ?
-                        <div className='clear-button'>
-                            <button onClick={() => setSearchCard('')}><span><i className="material-icons">clear</i></span></button>
-                        </div>
-                        :
-                        null
+                        {searchTerm !== '' ?
+                            <div className='clear-button'>
+                                <button onClick={() => { setSearchTerm(''); setSearchDisplay(false) }}><span><i className="material-icons">clear</i></span></button>
+                            </div>
+                            :
+                            null
                         }
 
                         <div className="searchbar-logo" id="s-cover">
-                            <button onClick={(e) => searchCard !== '' ? goToResults(e) : e.preventDefault()}>
+                            <button type="button" onClick={() => searchTerm !== '' ? setSearchDisplay(true) : null}>
                                 <div id="s-circle">
                                 </div>
                                 <span>
@@ -44,6 +58,20 @@ function SearchBar() {
                     </div>
                 </form>
             </div>
+
+            {searchTerm != '' && searchDisplay ?
+                    <div className='pop-up'>
+                        <div className='animate__animated animate__jackInTheBox'>
+                        <div className='pop-up-results'>
+                            <SearchResults searchingCards={searchingCards} />
+                            <div className='clear-button-pop-up'>
+                                <button onClick={(e) => { setSearchDisplay(false); (e).preventDefault() }}><span><i className="material-icons">clear</i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                :
+                null}
         </div>
     )
 }

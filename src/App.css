@@ -6,7 +6,7 @@
         rgba(241, 99, 98, 0));
     --border-radius: 2em;
     --border-top: 3px solid var(--main-color-1);
-    --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.315);
+    --box-shadow: 0 2px 3px rgba(96, 26, 26, 0.315);
     --heights: 50vh;
     --main-color-1: rgba(241, 99, 98, 1);
     --darken-main-color-1: rgba(199, 82, 82, 1);
