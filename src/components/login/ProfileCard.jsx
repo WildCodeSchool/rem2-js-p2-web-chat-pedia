@@ -23,7 +23,7 @@ const ProfileCard = (props) => {
                   <a href={userLoggedData.github} target="_blank" rel="noopener noreferrer" className='socials'><i className="fa fa-github" ></i></a>
                 </span>
                 <p></p>
-                <button className="link-button"><Link to="/depot">Contribuer</Link></button>
+                <Link to="/depot"><button className="link-button">Contribuer</button></Link>
               </div>
             </div>
 

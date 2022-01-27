@@ -35,12 +35,6 @@ const LoginCard = (props) => {
     return (
         <div className='LoginCard'>
             <form onSubmit={handleSubmit} className='form-container'>
-                <div className='login-notification'>{isUserLoggedIn ?
-                    <p>Félicitations, vous êtes connecté</p>
-                    :
-                    null}
-                </div>
-
                 <div className='input-line'>
                     <label htmlFor="text">
                         <i className="material-icons colored-icons">account_circle</i>
