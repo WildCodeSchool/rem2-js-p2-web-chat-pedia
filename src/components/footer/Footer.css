@@ -5,6 +5,7 @@
   background: linear-gradient(to bottom, var(--main-color-1) 0%, var(--darken-main-color-1) 100%);
   color: rgb(228, 228, 228);
   height: 150px;
+  margin-top: 100px;
 }
 
 .contact-container {
@@ -35,4 +36,51 @@
   text-decoration: none;
   color: rgb(228, 228, 228);
   font-size: 30px;
+}
+
+@media screen and (max-width: 480px)
+{
+  .Footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--main-color-1) 0%, var(--darken-main-color-1) 100%);
+    color: rgb(24, 13, 13);
+    height: 65px;
+    margin-top: 100px;
+    font-size: 10px;
+  }
+  
+  .contact-container {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .container-personel {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .personel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 30px;
+    font-size: 10px;
+  }
+  
+  .icon-personel {
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 0;
+  }
+  
+  .icon-personel a {
+    margin: 0px 10px 0px 0px;
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    font-size: 15px;
+  }
+  
 }
