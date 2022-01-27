@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
             </div>
             <AssetsFilter />
-            <a href='' target="_blank" rel="noopener noreferrer"><img src={HPEats} alt="pub hp eats"/></a>
+            <a className='pub' href='' target="_blank" rel="noopener noreferrer"><img src={HPEats} alt="pub hp eats"/></a>
         </div>
     )
 }
