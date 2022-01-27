@@ -9,7 +9,7 @@
 }
 
 .contact-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
@@ -36,4 +36,36 @@
   text-decoration: none;
   color: rgb(228, 228, 228);
   font-size: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .Footer {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .container-personel {
+    flex-wrap: wrap;
+    align-items: center;
+
+  }
+
+  .icon-personel a {
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+
+  .contact {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1279px) {
+  .Footer {
+    flex-direction: column;
+  }
+
+  .contact {
+    padding-top: 20px;
+  }
 }
