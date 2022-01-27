@@ -19,8 +19,8 @@ const SignUpCard = () => {
                 <input type="text" placeholder="Entrer votre adresse mail" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual'/>
                 <input type="password" placeholder="Entrer votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual'/>
                 <input type="password" placeholder="Entrer de nouveau votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual'/>
-                <button className="light-button">La création de compte sera prochainement disponible</button>
             </form>
+                <button className="light-button">La création de compte sera prochainement disponible</button>
             
         </div>
     )
