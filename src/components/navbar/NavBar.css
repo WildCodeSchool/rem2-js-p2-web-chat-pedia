@@ -7,8 +7,9 @@
     margin-bottom: 42px;
 }
 
-.Navbar img {
-    height: 8vw;
+.navbar-logo {
+    width: 8vw;
+    height: auto;
     position: relative;
     top: 0%;
     left: 0%;
