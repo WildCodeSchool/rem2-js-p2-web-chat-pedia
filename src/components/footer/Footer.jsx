@@ -26,6 +26,8 @@ const Footer = () => {
                         <a href="" target="_blank"><i className="fa fa-linkedin" rel="noopener noreferrer" ></i></a>
                         <a href="https://github.com/YacineHATEM" target="_blank"><i className="fa fa-github" rel="noopener noreferrer"></i></a>
                     </div>
+                </div>
+                <div>
                     <div className='personel'>
                         <p>Florent Lefevre</p>
                         <div className='icon-personel'>
