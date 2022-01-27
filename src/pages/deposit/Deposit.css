@@ -1,4 +1,4 @@
-/* .Deposit {
+.Deposit {
     height: 400px;
 }
 
@@ -13,87 +13,37 @@
 
 .animateanimated.animate__zoomIn {
         --animate-duration: 15s;
-} */
+}
 
 @media screen and (max-width: 480px)
 {
     .Deposit {
-        height: 400px;
-        margin-right: 0px;
+        transform: scale(1.3);
         justify-content: center;
+        padding:0;
     }
     
-    .Deposit h1, .Deposit h2, .Deposit img {
-        margin-bottom: 20px;
-        font-size:20px;
+    .Deposit h1 {
+        margin-top : 150px;
+    }
+
+    .Deposit h1, .Deposit h2 {
+        /* transform: scale(0.5); */
+        font-size: 20px;
     }
     
     .Deposit img {
-        margin-top: 50px;
-        width: 200px;
-    }
-    
-    .animateanimated.animate__zoomIn {
-            --animate-duration: 15s;
+        margin-top: 1px;
+        transform: scale(0.5);
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px)
+@media screen and (min-width: 481px) and (max-width: 1279px)
 {
     .Deposit {
-        height: 400px;
-    }
-    
-    .Deposit h1, .Deposit h2, .Deposit img {
-        margin-bottom: 20px;
-    }
-    
-    .Deposit img {
+        /* transform: scale(0.8); */
+        justify-content: center;
+        font-size: 30px;
         margin-top: 50px;
-        width: 300px;
-    }
-    
-    .animateanimated.animate__zoomIn {
-            --animate-duration: 15s;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1279px)
-{
-    .Deposit {
-        height: 400px;
-    }
-    
-    .Deposit h1, .Deposit h2, .Deposit img {
-        margin-bottom: 20px;
-    }
-    
-    .Deposit img {
-        margin-top: 50px;
-        width: 300px;
-    }
-    
-    .animateanimated.animate__zoomIn {
-            --animate-duration: 15s;
-    }
-}
-
-@media screen and (min-width: 1280px)
-{
-    .Deposit {
-        height: 400px;
-    }
-    
-    .Deposit h1, .Deposit h2, .Deposit img {
-        margin-bottom: 20px;
-    }
-    
-    .Deposit img {
-        margin-top: 50px;
-        width: 300px;
-    }
-    
-    .animateanimated.animate__zoomIn {
-            --animate-duration: 15s;
     }
 }
