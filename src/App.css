@@ -27,7 +27,7 @@ body {
     background-attachment: fixed;
     background-image: url(/src/assets/bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 200vh;
     text-align: center;
 }
 

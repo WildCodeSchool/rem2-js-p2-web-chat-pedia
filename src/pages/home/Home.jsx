@@ -1,6 +1,7 @@
 import React from 'react'
 import AssetsFilter from '../../components/filters/AssetsFilter'
 import CatWork from '../../assets/cat-work.png'
+import HPEats from '../../assets/hp_eats.gif'
 import Slider from '../../components/news/Slider'
 import './Home.css'
 
@@ -13,14 +14,15 @@ const Home = () => {
                     <h1 className='welcome-title'>Bienvenue à toi, babe !</h1>
                     <p>Pour trouver une ressource, utilises au choix :</p>
                     <p>- La barre de recherche</p>
-                    <p>- Les suggestions ci-contre</p>
-                    <p>- Les boutons ci-dessous</p>
+                    <p>- Les suggestions</p>
+                    <p>- Les boutons de filtrage</p>
                 </div>
                 <div className='home-content'>
                 <Slider />
                 </div>
             </div>
             <AssetsFilter />
+            <a href='' target="_blank" rel="noopener noreferrer"><img src={HPEats} alt="pub hp eats"/></a>
         </div>
     )
 }
