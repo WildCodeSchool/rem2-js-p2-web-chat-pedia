@@ -7,8 +7,9 @@
     margin-bottom: 42px;
 }
 
-.Navbar img {
-    height: 8vw;
+.navbar-logo {
+    width: 8vw;
+    height: auto;
     position: relative;
     top: 0%;
     left: 0%;
@@ -68,4 +69,78 @@
     background-position: left bottom;
     border-bottom: 8px solid var(--darken-main-color-1);
     color: var(--main-color-2);
+}
+
+@media screen and (max-width: 480px) {
+    .Navbar {
+        background: var(--background-gradient);
+        display: flex;
+        font-size: xx-large;
+        justify-content: space-around;
+        border-top: 7px solid var(--main-color-1);
+        margin-bottom: 42px;
+    }
+
+    .Navbar img {
+        height: 4vw;
+        position: relative;
+        top: 0%;
+        left: 0%;
+    }
+    
+    .navbar-logo-title {
+        align-items: center;
+        display: flex;
+    }
+    
+    .title-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration:none; 
+        color: var(--main-color-1);
+        height: 100%;
+    }
+    
+    .searchbar-component {
+        align-self: center;
+        width: 30%;
+    }
+    
+    .searchbar {
+        margin : 0px 40px;
+    }
+    
+    .navigation {
+        display: flex;
+        height: 30px;
+    }
+    
+    .navigation-link {
+        align-items: center;
+        background-position: right bottom;
+        -webkit-border-radius: 0px 0px 30px 30px;
+        -moz-border-radius: 0px 0px 30px 30px;
+        border-radius: 0px 0px 30px 30px;;
+        border-bottom: 8px solid var(--main-color-1);
+        color: var(--main-color-3);
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        width: 5vh;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .selected, .navigation-link {
+        background: linear-gradient(to right, var(--main-color-1) 50%, transparent 0%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+    }
+      
+    .selected, .navigation-link:hover {
+        background-position: left bottom;
+        border-bottom: 8px solid var(--darken-main-color-1);
+        color: var(--main-color-2);
+    }
 }

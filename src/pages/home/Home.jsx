@@ -1,7 +1,7 @@
 import React from 'react'
 import AssetsFilter from '../../components/filters/AssetsFilter'
 import CatWork from '../../assets/cat-work.png'
-import Slider from '../../components/news/Slider';
+import Slider from '../../components/news/Slider'
 import './Home.css'
 
 const Home = () => {

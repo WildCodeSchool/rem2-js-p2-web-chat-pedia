@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import CatHunt from '../../assets/cat-hunt.png'
 import CatHunt0 from '../../assets/cat-hunt-zero.png'
@@ -139,7 +138,7 @@ const AssetsFilter = () => {
                         :
                         null
                 }
-                    </div>
+                    </div> 
             </div>
         </div>
     )
