@@ -110,3 +110,12 @@
     }
 
 }
+
+@media screen and (max-width: 480px) {
+    .GenerateCard {
+        border-bottom: none;
+        height: 380px;
+        transform: perspective(1500px) rotateY(0deg);
+        width: 70vw;
+    }
+}

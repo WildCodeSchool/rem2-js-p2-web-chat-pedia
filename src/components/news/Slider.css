@@ -57,7 +57,7 @@
     top: 50%;
     width: auto;
     padding: 2rem 2.5rem;
-    margin-top: -5rem;
+    /* margin-top: -5rem; */
     font-size: 40px;
     font-weight: bold;
     border-radius: 0px 5px 5px 0px;
@@ -73,4 +73,33 @@
 .next {
     right: -17px;
     border-radius: 5px 0px 0px 5px;
+}
+
+@media screen and (max-width: 480px) {
+.Slider {
+    width: 100%;
+}
+
+.slide-image {
+    height: 40%;
+    width: 90%;
+}
+
+.text {
+    margin-top: 20px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 0rem 2.5rem;
+    margin-top: -5rem;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+}
 }

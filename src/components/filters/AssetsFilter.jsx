@@ -37,7 +37,8 @@ const AssetsFilter = () => {
         ]
     ]
 
-    const resetFilters = () => {
+    const resetFilters = (e) => {
+        e.preventDefault();
         setTechClicked('');
         setFormatClicked('');
     }
@@ -59,11 +60,11 @@ const AssetsFilter = () => {
                 <div className="filters-box-main">
                     <p>Ton projet porte sur quel type de dev ?</p>
                     <div className="buttons-stylized">
-                        <button onClick={() => { setDevClicked(`${buttons[0][0]}`); resetFilters() }}>
+                        <button type='button' onClick={() => { setDevClicked(`${buttons[0][0]}`); resetFilters() }}>
                             {buttons[0][0]}
                         </button>
 
-                        <button onClick={() => { setDevClicked(`${buttons[1][0]}`); resetFilters() }}>{buttons[1][0]}</button>
+                        <button type='button' onClick={() => { setDevClicked(`${buttons[1][0]}`); resetFilters() }}>{buttons[1][0]}</button>
                     </div>
                 </div>
 
@@ -72,7 +73,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ok ! Sur quelle techno ?</p>
                             <div className="buttons-stylized">
-                                {buttons[0][1].map((button) => <button onClick={() => setTechClicked(`${button}`)}>{button}</button>)}
+                                {buttons[0][1].map((button) => <button type='button' onClick={(e) => { e.preventDefault(); setTechClicked(`${button}`)}}>{button}</button>)}
                             </div>
                         </div>
                     </div>
@@ -85,7 +86,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ok! Sur quelle techno ?</p>
                             <div className="buttons-stylized" id="">
-                                {buttons[1][1].map((button) => <button onClick={() => setTechClicked(`${button}`)}></button>)}
+                                {buttons[1][1].map((button) => <button type='button' onClick={(e) => { e.preventDefault(); setTechClicked(`${button}`)}}>{button}</button>)}
                             </div>
                         </div>
                     </div>
@@ -98,7 +99,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ca marche ! Avec quel format es-tu le plus à l'aise ?</p>
                             <div className="buttons-stylized">
-                                {buttons[2][1].map((button) => <button onClick={() => setFormatClicked(`${button}`)}>
+                                {buttons[2][1].map((button) => <button type='button' onClick={() => setFormatClicked(`${button}`)}>
                                     {button}
                                 </button>)}
                             </div>

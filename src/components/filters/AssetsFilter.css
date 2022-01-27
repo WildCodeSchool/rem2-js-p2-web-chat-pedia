@@ -3,7 +3,7 @@
     flex-direction: column;
     transition: 1s ease-in-out all;
     width: 100vw;
-    margin-top: 80px;
+    margin: 42px 0px;
 }
 
 .filter-container {
@@ -71,9 +71,47 @@
 }
 
 .animate__animated.animate__fadeInRight {
-    animation-delay: 0.2s;
+    animation-delay: 0s;
 }
 
 .animate__animated.animate__bounce {
     animation-duration: 2s;
+}
+
+@media screen and (max-width: 480px) {
+    .AssetsFilter {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: -60px;
+    }
+
+    .filter-container {
+        align-items: center;
+    }
+
+    .filter-results {
+        margin-top: 20px;
+    }
+
+    .filters-box-main, .filters-box {
+        width: 80vw;
+    }
+
+    .display-cards-flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80vw;
+    }
+
+    .display-cards-title {
+        transform: scale(0.8);
+    }
+
+    .buttons-stylized button {
+        width: 140px;
+    }
 }
