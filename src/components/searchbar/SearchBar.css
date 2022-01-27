@@ -172,3 +172,60 @@
   margin-top: 40px;
   transform: scale(2.5);
 }
+
+@media screen and (max-width: 480px) {
+  .pop-up {
+    height: 180vh;
+    margin: -90px -60vw;
+    position: absolute;
+    width: 110vw;
+    z-index: 4;
+  }
+  
+  .animate__animated {
+    transform: scale(0.5);
+  }
+
+  .pop-up-results {
+    margin: 0px 25px;
+    transform: scale(0.8);
+    width: 100vw;
+  }
+  
+  .clear-button-pop-up button {
+    color: var(--main-color-3);
+    cursor: pointer;
+    font-size: large;
+    position: relative;
+    left: -150px;
+    top: -60px;
+    transform: scale(1.9);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1279px) {
+  .pop-up {
+    height: 160vh;
+    margin: -8vh -50vw;
+    position: absolute;
+    width: 110vw;
+    z-index: 4;
+  }
+  
+  .animate__animated {
+    transform: scale(0.5);
+  }
+
+  .pop-up-results {
+    margin: 100px 140px;
+  }
+  
+  .clear-button-pop-up button {
+    color: var(--main-color-3);
+    font-size: large;
+    position: relative;
+    left: -270px;
+    top: -60px;
+    transform: scale(1.9);
+  }
+}

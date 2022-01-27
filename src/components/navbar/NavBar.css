@@ -83,8 +83,7 @@
     }
 
     .Navbar img {
-        height: 18vw;
-        width: 18vw;
+        width: 80%;
         position: relative;
         top: 0%;
         left: -50%;

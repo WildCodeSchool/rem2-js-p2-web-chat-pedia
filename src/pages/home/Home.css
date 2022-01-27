@@ -19,6 +19,10 @@ p {
     margin-top:10px;
 }
 
+.pub img {
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 480px) {
     .home-content-container {
         align-items: center;
