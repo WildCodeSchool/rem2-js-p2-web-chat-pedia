@@ -8,6 +8,7 @@
 .LoginCard input-line {
     display: flex;
     align-items: center;
+    margin-bottom: 200px;
 }
 
 .colored-icons {
