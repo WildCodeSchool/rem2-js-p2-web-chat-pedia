@@ -33,27 +33,27 @@ const LoginCard = (props) => {
     };
 
     return (
-        <div className='LoginCard'>
-            <form onSubmit={handleSubmit} className='form-container'>
-                <div className='input-line'>
-                    <label htmlFor="text">
-                        <i className="material-icons colored-icons">account_circle</i>
-                    </label>
-                    <input type="text" id="text" placeholder="Entrer votre adresse mail" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual' />
-                </div>
+            <div className='LoginCard'>
+                <form onSubmit={handleSubmit} className='form-container'>
+                    <div className='input-line'>
+                        <label htmlFor="text">
+                            <i className="material-icons colored-icons">account_circle</i>
+                        </label>
+                        <input type="text" id="text" placeholder="Entrer votre adresse mail" value={email} onChange={(e) => setEmail(e.target.value)} className='input-visual' />
+                    </div>
 
-                <div className='input-line'>
-                    <label htmlFor="password">
-                        <i className="material-icons colored-icons">lock</i>
-                    </label>
-                    <input type="password" id="password" placeholder="Entrer votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual' />
-                </div>
+                    <div className='input-line'>
+                        <label htmlFor="password">
+                            <i className="material-icons colored-icons">lock</i>
+                        </label>
+                        <input type="password" id="password" placeholder="Entrer votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} className='input-visual' />
+                    </div>
 
-                <button className='valid-button' onClick={LoginCheck}>
-                    Se connecter
-                </button>
-            </form>
-        </div>
+                    <button className='valid-button' onClick={LoginCheck}>
+                        Se connecter
+                    </button>
+                </form>
+            </div>
     )
 }
 

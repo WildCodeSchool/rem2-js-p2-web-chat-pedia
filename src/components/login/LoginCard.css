@@ -8,6 +8,7 @@
 .LoginCard input-line {
     display: flex;
     align-items: center;
+    /* margin-bottom: 200px; */
 }
 
 .colored-icons {
@@ -16,4 +17,8 @@
 
 .LoginCard input-line:focus {
     background-color: var(--main-color-2);
+}
+
+.space {
+    height: 20vh;
 }
